@@ -1,0 +1,3670 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "checkedAt": "2026-06-12T16:30:33.234Z",
+  "desktopRoutes": [
+    "/",
+    "/community",
+    "/workouts",
+    "/nutrition",
+    "/recovery",
+    "/adaptive-fitness",
+    "/injured-athlete",
+    "/yoga",
+    "/pilates",
+    "/tai-chi",
+    "/exercises",
+    "/education",
+    "/education/body-shoulders",
+    "/education/style-pilates",
+    "/media",
+    "/search"
+  ],
+  "mobileRoutes": [
+    "/",
+    "/community",
+    "/search",
+    "/media",
+    "/education",
+    "/workouts"
+  ],
+  "disclaimerModalVisible": true,
+  "disclaimerScreenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__disclaimer-modal-workouts.png",
+  "results": [
+    {
+      "route": "/",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__home.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/education",
+        "/dashboard",
+        "/workouts",
+        "/nutrition",
+        "/community",
+        "/search",
+        "/training-nutrition-principles",
+        "/recovery",
+        "/transformations",
+        "/profile/er-athlete",
+        "/adaptive-fitness",
+        "/exercises",
+        "/routines",
+        "/community/groups",
+        "/injured-athlete",
+        "/yoga",
+        "/pets",
+        "/challenges",
+        "/achievements",
+        "/leaderboards",
+        "/media",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 254
+    },
+    {
+      "route": "/community",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__community.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/community",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/community",
+        "/community/groups",
+        "/community/groups/general-fitness",
+        "/community/groups/beginners",
+        "/community/groups/bodybuilding",
+        "/community/groups/powerlifting",
+        "/community/groups/weight-loss",
+        "/community/groups/injured-athlete",
+        "/community/groups/transformation-stories",
+        "/community/groups/meal-prep",
+        "/community/groups/progress-photos",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/community/groups/questions-help",
+        "/media",
+        "/profile/er-athlete",
+        "/profile/coach-maya",
+        "/profile/jordan-r",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 231
+    },
+    {
+      "route": "/workouts",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__workouts.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/workouts",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/workouts/builder",
+        "/workouts",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/education",
+        "/injured-athlete",
+        "/recovery",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 339
+    },
+    {
+      "route": "/nutrition",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__nutrition.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/nutrition",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/nutrition",
+        "/training-nutrition-principles",
+        "/exercises",
+        "/routines",
+        "/adaptive-fitness",
+        "/recovery",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 240
+    },
+    {
+      "route": "/recovery",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__recovery.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/recovery",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/injured-athlete",
+        "/recovery",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/yoga",
+        "/pilates",
+        "/tai-chi",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 257
+    },
+    {
+      "route": "/adaptive-fitness",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__adaptive-fitness.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Adaptive Fitness Education | E.R. Fitness",
+      "path": "/adaptive-fitness",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/adaptive-fitness",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/education/adaptive-wheelchair-users",
+        "/education/adaptive-amputees",
+        "/education/adaptive-prosthetic-users",
+        "/education/adaptive-limited-mobility",
+        "/education/adaptive-adaptive-athletes",
+        "/education/adaptive-seniors",
+        "/education/adaptive-neurological-conditions",
+        "/education/condition-multiple-sclerosis",
+        "/education/condition-parkinsons",
+        "/education/condition-arthritis",
+        "/education/condition-fibromyalgia",
+        "/education/condition-joint-replacement",
+        "/education/condition-chronic-pain",
+        "/education/condition-balance-impairment",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 137
+    },
+    {
+      "route": "/injured-athlete",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__injured-athlete.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/injured-athlete",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/injured-athlete",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/recovery",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 263
+    },
+    {
+      "route": "/yoga",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__yoga.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/yoga",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/yoga",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 96
+    },
+    {
+      "route": "/pilates",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__pilates.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/pilates",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/pilates",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 108
+    },
+    {
+      "route": "/tai-chi",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__tai-chi.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/tai-chi",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/tai-chi",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 96
+    },
+    {
+      "route": "/exercises",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__exercises.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Exercise Library | E.R. Fitness",
+      "path": "/exercises",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/dashboard?track=exercises",
+        "/workouts",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/dashboard?open=exercise-library",
+        "/dashboard?track=exercise-library",
+        "/injured-athlete",
+        "/recovery",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 565
+    },
+    {
+      "route": "/education",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__education.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Education Knowledge Base | E.R. Fitness",
+      "path": "/education",
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/adaptive-training.svg",
+          "alt": "Adaptive Training Access"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/learning-paths.svg",
+          "alt": "Learning Path System"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/video-embed-library.svg",
+          "alt": "Video Embed Library"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/education",
+        "/dashboard",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/nutrition",
+        "/recovery",
+        "/content",
+        "/workouts",
+        "/injured-athlete",
+        "/yoga",
+        "/pilates",
+        "/tai-chi",
+        "/community",
+        "/media",
+        "/search",
+        "/legal/disclaimer",
+        "/education/body-neck",
+        "/education/body-shoulders",
+        "/education/body-front-delts",
+        "/education/body-side-delts",
+        "/education/body-rear-delts",
+        "/education/body-rotator-cuff",
+        "/education/body-biceps",
+        "/education/body-triceps",
+        "/education/body-brachialis",
+        "/education/body-forearms",
+        "/education/body-grip",
+        "/education/body-chest",
+        "/education/body-lats",
+        "/education/body-rhomboids",
+        "/education/body-traps",
+        "/education/body-spinal-erectors",
+        "/education/body-abs",
+        "/education/body-obliques",
+        "/education/body-tva",
+        "/education/body-glutes",
+        "/education/body-quads",
+        "/education/body-hamstrings",
+        "/education/body-adductors",
+        "/education/body-abductors",
+        "/education/body-calves",
+        "/education/body-soleus",
+        "/education/body-tibialis-anterior",
+        "/education/body-hands",
+        "/education/body-feet",
+        "/education/body-ankles",
+        "/education/body-back",
+        "/education/body-arms",
+        "/education/body-core",
+        "/education/body-hips",
+        "/education/style-bodybuilding",
+        "/education/style-powerlifting",
+        "/education/style-olympic-lifting",
+        "/education/style-strongman",
+        "/education/style-tactical-fitness",
+        "/education/style-military-conditioning",
+        "/education/style-endurance",
+        "/education/style-running",
+        "/education/style-sprinting",
+        "/education/style-hiit",
+        "/education/style-functional-fitness",
+        "/education/style-athletic-performance",
+        "/education/style-agility",
+        "/education/style-conditioning",
+        "/education/style-explosive-training"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 562
+    },
+    {
+      "route": "/education/body-shoulders",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__education-body-shoulders.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Shoulders | E.R. Fitness",
+      "path": "/education/body-shoulders",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/dashboard?track=body-shoulders",
+        "/education",
+        "/dashboard?open=body-shoulders",
+        "/workouts?program=Shoulder%20Prep%20Protocol",
+        "/workouts",
+        "/education/body-neck",
+        "/education/body-front-delts",
+        "/education/body-side-delts",
+        "/education/body-rear-delts",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 57
+    },
+    {
+      "route": "/education/style-pilates",
+      "viewport": "desktop",
+      "screenshot": null,
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Pilates | E.R. Fitness",
+      "path": "/education/style-pilates",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/dashboard?track=style-pilates",
+        "/education",
+        "/dashboard?open=style-pilates",
+        "/recovery?program=Pilates%20Foundations",
+        "/recovery",
+        "/education/body-neck",
+        "/education/body-rotator-cuff",
+        "/education/body-tva",
+        "/education/body-feet",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 57
+    },
+    {
+      "route": "/media",
+      "viewport": "desktop",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__media.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/media",
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        },
+        {
+          "tag": "label",
+          "text": "Content type\nProgre  Update\nTran formation Story\nWorkout Tip\nNutrition Tip\nRecovery Tip\nQu",
+          "scrollWidth": 218,
+          "clientWidth": 183,
+          "width": 183
+        }
+      ],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Movement Photo Sequences"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Photo Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Muscle Diagram Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Recovery Movement Guides"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "ACE Exercise Library Demonstrations"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/media",
+        "/discover",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/workouts",
+        "/injured-athlete",
+        "/recovery",
+        "/community",
+        "/education",
+        "/legal/disclaimer",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 370
+    },
+    {
+      "route": "/search",
+      "viewport": "desktop",
+      "screenshot": null,
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/search",
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/content",
+        "/media",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/education",
+        "/injured-athlete",
+        "/admin",
+        "/profile",
+        "/workouts",
+        "/community/blog",
+        "/nutrition",
+        "/recovery",
+        "/community/groups/general-fitness",
+        "/profile/er-athlete",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 129
+    },
+    {
+      "route": "/",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__home.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/education",
+        "/dashboard",
+        "/workouts",
+        "/nutrition",
+        "/community",
+        "/search",
+        "/training-nutrition-principles",
+        "/recovery",
+        "/transformations",
+        "/profile/er-athlete",
+        "/adaptive-fitness",
+        "/exercises",
+        "/routines",
+        "/community/groups",
+        "/injured-athlete",
+        "/yoga",
+        "/pets",
+        "/challenges",
+        "/achievements",
+        "/leaderboards",
+        "/media",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 254
+    },
+    {
+      "route": "/community",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__community.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/community",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [
+        {
+          "tag": "button",
+          "text": "Tran formation ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 247,
+          "right": 399,
+          "width": 152,
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Tip ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 407,
+          "right": 466,
+          "width": 59,
+          "scrollWidth": 57,
+          "clientWidth": 57,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Que tion ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 474,
+          "right": 577,
+          "width": 103,
+          "scrollWidth": 101,
+          "clientWidth": 101,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Progre  Update ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 585,
+          "right": 748,
+          "width": 163,
+          "scrollWidth": 161,
+          "clientWidth": 161,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Video ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 756,
+          "right": 834,
+          "width": 78,
+          "scrollWidth": 76,
+          "clientWidth": 76,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Photo ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 842,
+          "right": 921,
+          "width": 79,
+          "scrollWidth": 77,
+          "clientWidth": 77,
+          "overflowX": "visible"
+        }
+      ],
+      "clippedText": [],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/community",
+        "/community/groups",
+        "/community/groups/general-fitness",
+        "/community/groups/beginners",
+        "/community/groups/bodybuilding",
+        "/community/groups/powerlifting",
+        "/community/groups/weight-loss",
+        "/community/groups/injured-athlete",
+        "/community/groups/transformation-stories",
+        "/community/groups/meal-prep",
+        "/community/groups/progress-photos",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/community/groups/questions-help",
+        "/media",
+        "/profile/er-athlete",
+        "/profile/coach-maya",
+        "/profile/jordan-r",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 231
+    },
+    {
+      "route": "/search",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__search.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/search",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [],
+      "brokenImages": [],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/content",
+        "/media",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/education",
+        "/injured-athlete",
+        "/admin",
+        "/profile",
+        "/workouts",
+        "/community/blog",
+        "/nutrition",
+        "/recovery",
+        "/community/groups/general-fitness",
+        "/profile/er-athlete",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 129
+    },
+    {
+      "route": "/media",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__media.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/media",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [
+        {
+          "tag": "button",
+          "text": "Tran formation Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 243,
+          "right": 460,
+          "width": 216,
+          "scrollWidth": 214,
+          "clientWidth": 214,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Workout Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 468,
+          "right": 630,
+          "width": 163,
+          "scrollWidth": 161,
+          "clientWidth": 161,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Nutrition Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 638,
+          "right": 805,
+          "width": 167,
+          "scrollWidth": 165,
+          "clientWidth": 165,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Recovery Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 813,
+          "right": 983,
+          "width": 170,
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "overflowX": "visible"
+        }
+      ],
+      "clippedText": [],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Movement Photo Sequences"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Photo Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Muscle Diagram Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Recovery Movement Guides"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "ACE Exercise Library Demonstrations"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/media",
+        "/discover",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/workouts",
+        "/injured-athlete",
+        "/recovery",
+        "/community",
+        "/education",
+        "/legal/disclaimer",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 370
+    },
+    {
+      "route": "/education",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__education.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Education Knowledge Base | E.R. Fitness",
+      "path": "/education",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/adaptive-training.svg",
+          "alt": "Adaptive Training Access"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/learning-paths.svg",
+          "alt": "Learning Path System"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/video-embed-library.svg",
+          "alt": "Video Embed Library"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/education",
+        "/dashboard",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/nutrition",
+        "/recovery",
+        "/content",
+        "/workouts",
+        "/injured-athlete",
+        "/yoga",
+        "/pilates",
+        "/tai-chi",
+        "/community",
+        "/media",
+        "/search",
+        "/legal/disclaimer",
+        "/education/body-neck",
+        "/education/body-shoulders",
+        "/education/body-front-delts",
+        "/education/body-side-delts",
+        "/education/body-rear-delts",
+        "/education/body-rotator-cuff",
+        "/education/body-biceps",
+        "/education/body-triceps",
+        "/education/body-brachialis",
+        "/education/body-forearms",
+        "/education/body-grip",
+        "/education/body-chest",
+        "/education/body-lats",
+        "/education/body-rhomboids",
+        "/education/body-traps",
+        "/education/body-spinal-erectors",
+        "/education/body-abs",
+        "/education/body-obliques",
+        "/education/body-tva",
+        "/education/body-glutes",
+        "/education/body-quads",
+        "/education/body-hamstrings",
+        "/education/body-adductors",
+        "/education/body-abductors",
+        "/education/body-calves",
+        "/education/body-soleus",
+        "/education/body-tibialis-anterior",
+        "/education/body-hands",
+        "/education/body-feet",
+        "/education/body-ankles",
+        "/education/body-back",
+        "/education/body-arms",
+        "/education/body-core",
+        "/education/body-hips",
+        "/education/style-bodybuilding",
+        "/education/style-powerlifting",
+        "/education/style-olympic-lifting",
+        "/education/style-strongman",
+        "/education/style-tactical-fitness",
+        "/education/style-military-conditioning",
+        "/education/style-endurance",
+        "/education/style-running",
+        "/education/style-sprinting",
+        "/education/style-hiit",
+        "/education/style-functional-fitness",
+        "/education/style-athletic-performance",
+        "/education/style-agility",
+        "/education/style-conditioning",
+        "/education/style-explosive-training"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 562
+    },
+    {
+      "route": "/workouts",
+      "viewport": "mobile",
+      "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__workouts.png",
+      "disclaimerBefore": true,
+      "acceptedDisclaimer": {
+        "visible": false,
+        "clicked": false
+      },
+      "title": "Every Routine Fitness | Companion Platform",
+      "path": "/workouts",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "horizontalScroll": false,
+      "overflowElements": [],
+      "clippedText": [],
+      "brokenImages": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        }
+      ],
+      "badVisibleAnchors": [],
+      "hashAnchorsMissingTargets": [],
+      "internalLinks": [
+        "/",
+        "/en",
+        "/en/dashboard",
+        "/en/education",
+        "/en/training-nutrition-principles",
+        "/en/workouts",
+        "/en/nutrition",
+        "/en/recovery",
+        "/en/community",
+        "/en/media",
+        "/en/discover",
+        "/en/search",
+        "/en/profile/er-athlete",
+        "/workouts/builder",
+        "/workouts",
+        "/exercises",
+        "/routines",
+        "/training-nutrition-principles",
+        "/adaptive-fitness",
+        "/education",
+        "/injured-athlete",
+        "/recovery",
+        "/legal/disclaimer",
+        "/legal/privacy",
+        "/legal/terms",
+        "/en/exercises",
+        "/en/routines",
+        "/en/workouts/builder",
+        "/en/challenges",
+        "/en/leaderboards",
+        "/en/injured-athlete",
+        "/en/adaptive-fitness",
+        "/en/yoga",
+        "/en/pilates",
+        "/en/tai-chi",
+        "/en/community/groups",
+        "/en/community/blog",
+        "/en/community/chat",
+        "/en/legal/disclaimer",
+        "/en/legal/privacy",
+        "/en/legal/terms"
+      ],
+      "headerVisible": true,
+      "footerVisible": true,
+      "disclaimerVisible": true,
+      "languageSelectorVisible": true,
+      "searchControlVisible": true,
+      "interactiveCount": 339
+    }
+  ],
+  "mobileNavigation": {
+    "before": {
+      "width": 390,
+      "text": true,
+      "hasButton": true
+    },
+    "click": {
+      "found": true,
+      "label": "Open navigation"
+    },
+    "after": {
+      "mobileNavVisible": true,
+      "hasDashboard": true,
+      "hasWorkouts": true,
+      "hasLanguageSelector": true,
+      "horizontalScroll": false
+    },
+    "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__navigation-open.png"
+  },
+  "languageSelector": {
+    "found": true,
+    "before": "/",
+    "after": "/es",
+    "storedLocale": null,
+    "htmlLang": "es",
+    "htmlDir": "ltr",
+    "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__language-selector-es.png"
+  },
+  "routeStatuses": [
+    {
+      "route": "/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/workouts",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/nutrition",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/recovery",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/adaptive-fitness",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/injured-athlete",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/yoga",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/pilates",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/tai-chi",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/exercises",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-shoulders",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-pilates",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/media",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/search",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/dashboard",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/education",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/training-nutrition-principles",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/workouts",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/nutrition",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/recovery",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/community",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/media",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/discover",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/search",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/profile/er-athlete",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/training-nutrition-principles",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/transformations",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/profile/er-athlete",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/routines",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/pets",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/challenges",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/achievements",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/leaderboards",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/legal/disclaimer",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/legal/privacy",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/legal/terms",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/exercises",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/routines",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/workouts/builder",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/challenges",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/leaderboards",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/injured-athlete",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/adaptive-fitness",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/yoga",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/pilates",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/tai-chi",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/community/groups",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/community/blog",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/community/chat",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/legal/disclaimer",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/legal/privacy",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/en/legal/terms",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/general-fitness",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/beginners",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/bodybuilding",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/powerlifting",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/weight-loss",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/injured-athlete",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/transformation-stories",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/meal-prep",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/progress-photos",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/community/groups/questions-help",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/profile/coach-maya",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/profile/jordan-r",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/workouts/builder",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-wheelchair-users",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-amputees",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-prosthetic-users",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-limited-mobility",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-adaptive-athletes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-seniors",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/adaptive-neurological-conditions",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-multiple-sclerosis",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-parkinsons",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-arthritis",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-fibromyalgia",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-joint-replacement",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-chronic-pain",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/condition-balance-impairment",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?track=exercises",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?open=exercise-library",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?track=exercise-library",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/content",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-neck",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-front-delts",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-side-delts",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-rear-delts",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-rotator-cuff",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-biceps",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-triceps",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-brachialis",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-forearms",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-grip",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-chest",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-lats",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-rhomboids",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-traps",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-spinal-erectors",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-abs",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-obliques",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-tva",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-glutes",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-quads",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-hamstrings",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-adductors",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-abductors",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-calves",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-soleus",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-tibialis-anterior",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-hands",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-feet",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-ankles",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-back",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-arms",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-core",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/body-hips",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-bodybuilding",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-powerlifting",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-olympic-lifting",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-strongman",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-tactical-fitness",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-military-conditioning",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-endurance",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-running",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-sprinting",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-hiit",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-functional-fitness",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-athletic-performance",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-agility",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-conditioning",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/education/style-explosive-training",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?track=body-shoulders",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?open=body-shoulders",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/workouts?program=Shoulder%20Prep%20Protocol",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?track=style-pilates",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/dashboard?open=style-pilates",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "brokenRoutes": [],
+  "screenshots": [
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__home.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__community.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__workouts.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__nutrition.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__recovery.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__adaptive-fitness.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__injured-athlete.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__yoga.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__pilates.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__tai-chi.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__exercises.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__education.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__education-body-shoulders.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__media.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__home.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__community.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__search.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__media.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__education.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__workouts.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__disclaimer-modal-workouts.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\mobile__navigation-open.png",
+    "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__language-selector-es.png"
+  ],
+  "issues": [
+    {
+      "severity": "high",
+      "route": "desktop /",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /community",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /workouts",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /workouts",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /nutrition",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /nutrition",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /recovery",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /recovery",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /adaptive-fitness",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /injured-athlete",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /injured-athlete",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /yoga",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /pilates",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /tai-chi",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /exercises",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /education",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/adaptive-training.svg",
+          "alt": "Adaptive Training Access"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/learning-paths.svg",
+          "alt": "Learning Path System"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/video-embed-library.svg",
+          "alt": "Video Embed Library"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /education",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /education/body-shoulders",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /education/style-pilates",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "desktop /media",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Movement Photo Sequences"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Photo Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Muscle Diagram Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Recovery Movement Guides"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "ACE Exercise Library Demonstrations"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /media",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        },
+        {
+          "tag": "label",
+          "text": "Content type\nProgre  Update\nTran formation Story\nWorkout Tip\nNutrition Tip\nRecovery Tip\nQu",
+          "scrollWidth": 218,
+          "clientWidth": 183,
+          "width": 183
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "desktop /search",
+      "issue": "Potential clipped text detected",
+      "details": [
+        {
+          "tag": "span",
+          "text": "Language",
+          "scrollWidth": 66,
+          "clientWidth": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "mobile /",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "mobile /community",
+      "issue": "Elements extend outside viewport",
+      "details": [
+        {
+          "tag": "button",
+          "text": "Tran formation ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 247,
+          "right": 399,
+          "width": 152,
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Tip ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 407,
+          "right": 466,
+          "width": 59,
+          "scrollWidth": 57,
+          "clientWidth": 57,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Que tion ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 474,
+          "right": 577,
+          "width": 103,
+          "scrollWidth": 101,
+          "clientWidth": 101,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Progre  Update ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 585,
+          "right": 748,
+          "width": 163,
+          "scrollWidth": 161,
+          "clientWidth": 161,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Video ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 756,
+          "right": 834,
+          "width": 78,
+          "scrollWidth": 76,
+          "clientWidth": 76,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Photo ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 842,
+          "right": 921,
+          "width": 79,
+          "scrollWidth": 77,
+          "clientWidth": 77,
+          "overflowX": "visible"
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "mobile /media",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Movement Photo Sequences"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Photo Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Muscle Diagram Library"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Recovery Movement Guides"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "ACE Exercise Library Demonstrations"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "route": "mobile /media",
+      "issue": "Elements extend outside viewport",
+      "details": [
+        {
+          "tag": "button",
+          "text": "Tran formation Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 243,
+          "right": 460,
+          "width": 216,
+          "scrollWidth": 214,
+          "clientWidth": 214,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Workout Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 468,
+          "right": 630,
+          "width": 163,
+          "scrollWidth": 161,
+          "clientWidth": 161,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Nutrition Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 638,
+          "right": 805,
+          "width": 167,
+          "scrollWidth": 165,
+          "clientWidth": 165,
+          "overflowX": "visible"
+        },
+        {
+          "tag": "button",
+          "text": "Recovery Gallerie ",
+          "className": "min-h-10 shrink-0 rounded-md border px-3 text-sm font-black border-white/10 bg-white/6 text-zinc-300",
+          "left": 813,
+          "right": 983,
+          "width": 170,
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "overflowX": "visible"
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "mobile /education",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/injury-aware.svg",
+          "alt": "Injury-Aware Training Ladder"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/community-learning.svg",
+          "alt": "Community Learning Network"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/equipment-library.svg",
+          "alt": "Equipment Library Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/adaptive-training.svg",
+          "alt": "Adaptive Training Access"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/learning-paths.svg",
+          "alt": "Learning Path System"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/video-embed-library.svg",
+          "alt": "Video Embed Library"
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "mobile /workouts",
+      "issue": "Broken images detected",
+      "details": [
+        {
+          "src": "http://127.0.0.1:3000/knowledge/training-principles.svg",
+          "alt": "Training Principles Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/nutrition-map.svg",
+          "alt": "Nutrition Plate Map"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/mobility-recovery.svg",
+          "alt": "Mobility and Recovery Flow"
+        },
+        {
+          "src": "http://127.0.0.1:3000/knowledge/exercise-library.svg",
+          "alt": "Exercise Library Teaching Card"
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "route": "language selector",
+      "issue": "Language selector did not switch to Spanish route/localStorage",
+      "details": {
+        "found": true,
+        "before": "/",
+        "after": "/es",
+        "storedLocale": null,
+        "htmlLang": "es",
+        "htmlDir": "ltr",
+        "screenshot": "C:\\Users\\inevi\\er-fitness-platform\\qa-screenshots\\desktop__language-selector-es.png"
+      }
+    }
+  ]
+}

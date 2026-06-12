@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Mobility and recovery flow</title>
+  <desc id="desc">A dark recovery flow diagram with warmup, mobility, cooldown, sleep, and readiness steps.</desc>
+  <rect width="960" height="540" fill="#07080a"/>
+  <rect x="58" y="64" width="844" height="412" rx="30" fill="#11161a" stroke="#2b3138" stroke-width="3"/>
+  <path d="M154 286c84-122 182-122 266 0s182 122 266 0 120-122 178-80" fill="none" stroke="#8cff00" stroke-width="16" stroke-linecap="round"/>
+  <path d="M154 334c84-122 182-122 266 0s182 122 266 0 120-122 178-80" fill="none" stroke="#ff6a00" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+  <g fill="#1a1f25" stroke="#f7f7f7" stroke-width="3">
+    <circle cx="178" cy="200" r="58"/>
+    <circle cx="334" cy="350" r="58"/>
+    <circle cx="492" cy="200" r="58"/>
+    <circle cx="650" cy="350" r="58"/>
+    <circle cx="806" cy="200" r="58"/>
+  </g>
+  <g fill="#f7f7f7" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="178" y="195" font-size="20">WARM</text><text x="178" y="220" font-size="20">UP</text>
+    <text x="334" y="356" font-size="20">MOBILITY</text>
+    <text x="492" y="195" font-size="20">COOL</text><text x="492" y="220" font-size="20">DOWN</text>
+    <text x="650" y="356" font-size="20">SLEEP</text>
+    <text x="806" y="206" font-size="20">READY</text>
+  </g>
+  <text x="116" y="112" fill="#ff6a00" font-family="Arial, sans-serif" font-size="34" font-weight="700">RECOVERY IS TRAINING SUPPORT</text>
+</svg>

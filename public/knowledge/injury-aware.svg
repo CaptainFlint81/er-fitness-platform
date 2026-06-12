@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Injury-aware training ladder</title>
+  <desc id="desc">A four-step return-to-training ladder from calm to control to strength to return.</desc>
+  <rect width="960" height="540" fill="#07080a"/>
+  <rect x="58" y="58" width="844" height="424" rx="30" fill="#12161b" stroke="#2b3138" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <rect x="128" y="350" width="160" height="72" rx="14" fill="#1d232a" stroke="#8cff00" stroke-width="4"/>
+    <rect x="310" y="286" width="160" height="136" rx="14" fill="#1d232a" stroke="#8cff00" stroke-width="4"/>
+    <rect x="492" y="214" width="160" height="208" rx="14" fill="#1d232a" stroke="#ff6a00" stroke-width="4"/>
+    <rect x="674" y="138" width="160" height="284" rx="14" fill="#1d232a" stroke="#ff6a00" stroke-width="4"/>
+    <text x="168" y="394" fill="#f7f7f7" font-size="28">CALM</text>
+    <text x="342" y="354" fill="#f7f7f7" font-size="28">CONTROL</text>
+    <text x="526" y="322" fill="#f7f7f7" font-size="28">STRENGTH</text>
+    <text x="708" y="286" fill="#f7f7f7" font-size="28">RETURN</text>
+    <text x="128" y="112" fill="#ff6a00" font-size="34">INJURY-AWARE TRAINING</text>
+  </g>
+  <path d="M146 240h512" stroke="#33404a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M646 210l44 30-44 30" fill="none" stroke="#8cff00" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

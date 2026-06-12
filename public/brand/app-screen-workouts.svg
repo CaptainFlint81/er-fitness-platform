@@ -1,0 +1,21 @@
+<svg width="360" height="720" viewBox="0 0 360 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E.R. Fitness workout app screen mockup">
+  <rect width="360" height="720" rx="42" fill="#070809"/>
+  <rect x="22" y="22" width="316" height="676" rx="34" fill="#101215" stroke="#2a2e35" stroke-width="2"/>
+  <text x="42" y="78" fill="#f7f7f2" font-family="Arial" font-size="22" font-weight="800">Workout System</text>
+  <rect x="42" y="104" width="276" height="120" rx="18" fill="#191b1f"/>
+  <path d="M62 190L104 124H138L96 190H62Z" fill="#ff6a00"/>
+  <path d="M112 190L154 124H188L146 190H112Z" fill="#8cff00"/>
+  <text x="206" y="153" fill="#f7f7f2" font-family="Arial" font-size="18" font-weight="800">Push Day</text>
+  <text x="206" y="181" fill="#b9bec6" font-family="Arial" font-size="13">Chest + Shoulders</text>
+  <rect x="42" y="252" width="276" height="58" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <rect x="42" y="328" width="276" height="58" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <rect x="42" y="404" width="276" height="58" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <text x="62" y="287" fill="#f7f7f2" font-family="Arial" font-size="15" font-weight="700">Bench Press</text>
+  <text x="62" y="363" fill="#f7f7f2" font-family="Arial" font-size="15" font-weight="700">Incline Dumbbell Press</text>
+  <text x="62" y="439" fill="#f7f7f2" font-family="Arial" font-size="15" font-weight="700">Cable Fly</text>
+  <text x="248" y="287" fill="#8cff00" font-family="Arial" font-size="14" font-weight="800">4 x 8</text>
+  <text x="248" y="363" fill="#8cff00" font-family="Arial" font-size="14" font-weight="800">3 x 10</text>
+  <text x="248" y="439" fill="#8cff00" font-family="Arial" font-size="14" font-weight="800">3 x 12</text>
+  <rect x="42" y="520" width="276" height="82" rx="18" fill="#ff6a00"/>
+  <text x="93" y="570" fill="#070809" font-family="Arial" font-size="18" font-weight="900">START SESSION</text>
+</svg>

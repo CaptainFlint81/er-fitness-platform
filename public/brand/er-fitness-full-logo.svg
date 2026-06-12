@@ -1,0 +1,17 @@
+<svg width="960" height="240" viewBox="0 0 960 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Every Routine Fitness full logo</title>
+  <desc id="desc">Full horizontal E.R. Fitness wordmark with electric orange, neon green, deep black, and graphite styling.</desc>
+  <rect width="960" height="240" rx="28" fill="#070809"/>
+  <rect x="18" y="18" width="924" height="204" rx="22" fill="#101215" stroke="#2a2e35" stroke-width="2"/>
+  <path d="M75 172L142 54H196L129 172H75Z" fill="#FF6A00"/>
+  <path d="M143 172L210 54H264L197 172H143Z" fill="#8CFF00"/>
+  <path d="M88 54H197L183 79H74L88 54Z" fill="#FF6A00"/>
+  <path d="M105 102H213L199 127H91L105 102Z" fill="#8CFF00"/>
+  <path d="M63 172H205L191 197H49L63 172Z" fill="#FF6A00"/>
+  <text x="300" y="103" fill="#F7F7F2" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="900" letter-spacing="0">EVERY ROUTINE</text>
+  <text x="302" y="162" fill="#8CFF00" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="900" letter-spacing="0">FITNESS</text>
+  <text x="596" y="162" fill="#FF6A00" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" letter-spacing="0">E.R. FITNESS</text>
+  <path d="M300 182H842" stroke="#2A2E35" stroke-width="4" stroke-linecap="round"/>
+  <path d="M300 182H520" stroke="#FF6A00" stroke-width="4" stroke-linecap="round"/>
+  <path d="M535 182H642" stroke="#8CFF00" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Nutrition principles plate map</title>
+  <desc id="desc">A dark nutrition diagram showing calories, protein, carbs, fats, hydration, and timing.</desc>
+  <rect width="960" height="540" fill="#07080a"/>
+  <rect x="48" y="48" width="864" height="444" rx="30" fill="#12161b" stroke="#2b3138" stroke-width="3"/>
+  <circle cx="480" cy="270" r="150" fill="#1b2228" stroke="#f7f7f7" stroke-width="5"/>
+  <path d="M480 270V120a150 150 0 0 1 129 74z" fill="#ff6a00" opacity=".88"/>
+  <path d="M480 270 609 194a150 150 0 0 1-22 172z" fill="#8cff00" opacity=".78"/>
+  <path d="M480 270 587 366a150 150 0 0 1-214 0z" fill="#f7f7f7" opacity=".82"/>
+  <path d="M480 270 373 366a150 150 0 0 1-22-172z" fill="#3a414b"/>
+  <path d="M480 270 351 194a150 150 0 0 1 129-74z" fill="#242b33"/>
+  <g fill="#f7f7f7" font-family="Arial, sans-serif" font-weight="700">
+    <text x="106" y="138" font-size="30">CALORIES</text>
+    <text x="690" y="138" font-size="30">PROTEIN</text>
+    <text x="108" y="430" font-size="30">HYDRATION</text>
+    <text x="682" y="430" font-size="30">TIMING</text>
+  </g>
+  <g stroke="#ff6a00" stroke-width="5" stroke-linecap="round">
+    <path d="M292 151h128"/>
+    <path d="M668 151H540"/>
+  </g>
+  <g stroke="#8cff00" stroke-width="5" stroke-linecap="round">
+    <path d="M314 414h114"/>
+    <path d="M654 414H538"/>
+  </g>
+  <g fill="#9ca3af" font-family="Arial, sans-serif" font-size="20">
+    <text x="398" y="512">Protein, carbs, fats, fluids, and meal rhythm support the goal.</text>
+  </g>
+</svg>

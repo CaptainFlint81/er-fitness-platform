@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="E.R. Fitness adaptive training visual">
+  <rect width="1200" height="675" fill="#070809"/>
+  <defs>
+    <linearGradient id="a" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#8cff00"/>
+      <stop offset="1" stop-color="#ff6a00"/>
+    </linearGradient>
+  </defs>
+  <circle cx="1010" cy="120" r="180" fill="#8cff00" fill-opacity=".08"/>
+  <circle cx="170" cy="575" r="210" fill="#ff6a00" fill-opacity=".08"/>
+  <rect x="54" y="54" width="1092" height="567" rx="34" fill="#111419" stroke="#ffffff" stroke-opacity=".12"/>
+  <text x="90" y="132" fill="#ff6a00" font-family="Arial, sans-serif" font-size="30" font-weight="800">ADAPTIVE FITNESS EDUCATION</text>
+  <text x="90" y="180" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="900">Modify the setup, keep the goal</text>
+  <g fill="none" stroke="url(#a)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="220" cy="392" r="74"/>
+    <path d="M220 318v-96l82 52"/>
+    <path d="M220 392h134"/>
+    <path d="M354 392l56 70"/>
+    <path d="M354 392l66-48"/>
+    <path d="M520 492V254"/>
+    <path d="M520 254h110"/>
+    <path d="M520 356h92"/>
+    <path d="M724 490V286l86-56 86 56v204"/>
+    <path d="M724 490h172"/>
+    <path d="M982 250v240"/>
+    <path d="M982 250l76 58"/>
+    <path d="M982 356l76 58"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-size="23" font-weight="700">
+    <text x="140" y="550">wheelchair fitness</text>
+    <text x="470" y="550">prosthetic-aware strength</text>
+    <text x="730" y="550">limited mobility options</text>
+    <text x="960" y="550">senior balance</text>
+  </g>
+</svg>

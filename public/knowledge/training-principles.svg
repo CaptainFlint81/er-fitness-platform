@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Training principles learning map</title>
+  <desc id="desc">A dark E.R. Fitness training map with blocks for overload, volume, intensity, frequency, and recovery.</desc>
+  <rect width="960" height="540" fill="#08090b"/>
+  <rect x="44" y="44" width="872" height="452" rx="28" fill="#111418" stroke="#2b3138" stroke-width="3"/>
+  <circle cx="776" cy="118" r="92" fill="#ff6a00" opacity=".16"/>
+  <circle cx="180" cy="420" r="118" fill="#8cff00" opacity=".11"/>
+  <path d="M140 302h680" stroke="#2b3138" stroke-width="10" stroke-linecap="round"/>
+  <path d="M180 302c60-92 132-138 216-138 94 0 148 118 244 118 60 0 104-32 140-78" fill="none" stroke="#8cff00" stroke-width="14" stroke-linecap="round"/>
+  <rect x="104" y="104" width="184" height="100" rx="18" fill="#1a1f25" stroke="#ff6a00" stroke-width="3"/>
+  <rect x="324" y="104" width="184" height="100" rx="18" fill="#1a1f25" stroke="#8cff00" stroke-width="3"/>
+  <rect x="544" y="104" width="184" height="100" rx="18" fill="#1a1f25" stroke="#ff6a00" stroke-width="3"/>
+  <rect x="214" y="348" width="184" height="100" rx="18" fill="#1a1f25" stroke="#8cff00" stroke-width="3"/>
+  <rect x="454" y="348" width="184" height="100" rx="18" fill="#1a1f25" stroke="#ff6a00" stroke-width="3"/>
+  <g fill="#f7f7f7" font-family="Arial, sans-serif" font-weight="700">
+    <text x="136" y="150" font-size="28">OVERLOAD</text>
+    <text x="364" y="150" font-size="28">VOLUME</text>
+    <text x="580" y="150" font-size="28">INTENSITY</text>
+    <text x="246" y="394" font-size="28">FREQUENCY</text>
+    <text x="494" y="394" font-size="28">RECOVERY</text>
+  </g>
+  <g fill="#9ca3af" font-family="Arial, sans-serif" font-size="18">
+    <text x="136" y="178">Progress one variable</text>
+    <text x="364" y="178">Dose hard work</text>
+    <text x="580" y="178">Match effort to goal</text>
+    <text x="246" y="422">Repeat skill often</text>
+    <text x="494" y="422">Adapt between sessions</text>
+  </g>
+</svg>

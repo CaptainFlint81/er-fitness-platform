@@ -1,0 +1,24 @@
+<svg width="360" height="720" viewBox="0 0 360 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E.R. Fitness profile app screen mockup">
+  <rect width="360" height="720" rx="42" fill="#070809"/>
+  <rect x="22" y="22" width="316" height="676" rx="34" fill="#101215" stroke="#2a2e35" stroke-width="2"/>
+  <rect x="42" y="56" width="276" height="112" rx="18" fill="#191b1f"/>
+  <circle cx="90" cy="158" r="42" fill="#ff6a00"/>
+  <circle cx="90" cy="158" r="30" fill="#101215"/>
+  <text x="42" y="232" fill="#f7f7f2" font-family="Arial" font-size="22" font-weight="900">Demo Athlete</text>
+  <text x="42" y="260" fill="#b9bec6" font-family="Arial" font-size="14">Recomp goal | Tactical hybrid</text>
+  <rect x="42" y="292" width="82" height="72" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <rect x="139" y="292" width="82" height="72" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <rect x="236" y="292" width="82" height="72" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <text x="63" y="325" fill="#8cff00" font-family="Arial" font-size="20" font-weight="900">42K</text>
+  <text x="158" y="325" fill="#8cff00" font-family="Arial" font-size="20" font-weight="900">18</text>
+  <text x="257" y="325" fill="#8cff00" font-family="Arial" font-size="20" font-weight="900">9</text>
+  <text x="59" y="348" fill="#b9bec6" font-family="Arial" font-size="12">XP</text>
+  <text x="153" y="348" fill="#b9bec6" font-family="Arial" font-size="12">Streak</text>
+  <text x="252" y="348" fill="#b9bec6" font-family="Arial" font-size="12">Badges</text>
+  <rect x="42" y="398" width="130" height="114" rx="16" fill="#ff6a00"/>
+  <rect x="188" y="398" width="130" height="114" rx="16" fill="#8cff00"/>
+  <rect x="42" y="528" width="276" height="60" rx="14" fill="#14171b" stroke="#2a2e35"/>
+  <text x="62" y="563" fill="#f7f7f2" font-family="Arial" font-size="15" font-weight="800">Transformation Wall</text>
+  <rect x="42" y="610" width="276" height="38" rx="12" fill="#ff6a00"/>
+  <text x="123" y="635" fill="#070809" font-family="Arial" font-size="14" font-weight="900">VIEW PROFILE</text>
+</svg>

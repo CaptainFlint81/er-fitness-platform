@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Community learning network</title>
+  <desc id="desc">A dark network of community learning nodes for posts, blogs, media, groups, and review.</desc>
+  <rect width="960" height="540" fill="#08090b"/>
+  <rect x="48" y="48" width="864" height="444" rx="28" fill="#12161b" stroke="#2b3138" stroke-width="3"/>
+  <g stroke="#33404a" stroke-width="5">
+    <path d="M250 170 480 270 710 170"/>
+    <path d="M250 370 480 270 710 370"/>
+    <path d="M250 170v200"/>
+    <path d="M710 170v200"/>
+  </g>
+  <g fill="#1c2228" stroke-width="4">
+    <circle cx="250" cy="170" r="70" stroke="#ff6a00"/>
+    <circle cx="710" cy="170" r="70" stroke="#8cff00"/>
+    <circle cx="480" cy="270" r="84" stroke="#f7f7f7"/>
+    <circle cx="250" cy="370" r="70" stroke="#8cff00"/>
+    <circle cx="710" cy="370" r="70" stroke="#ff6a00"/>
+  </g>
+  <g fill="#f7f7f7" font-family="Arial, sans-serif" font-weight="700" font-size="24" text-anchor="middle">
+    <text x="250" y="178">GROUPS</text>
+    <text x="710" y="178">MEDIA</text>
+    <text x="480" y="264">REVIEWED</text><text x="480" y="294">KNOWLEDGE</text>
+    <text x="250" y="378">BLOGS</text>
+    <text x="710" y="378">POSTS</text>
+  </g>
+</svg>
