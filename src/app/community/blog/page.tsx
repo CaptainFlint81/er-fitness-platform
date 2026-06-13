@@ -1,16 +1,19 @@
 import { BookOpen } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { BlogCard } from "@/components/content/BlogCard";
 import { CategoryTabs } from "@/components/content/CategoryTabs";
 import { AttachmentControls } from "@/components/content/AttachmentControls";
 import { ComposerStatusActions } from "@/components/content/ComposerStatusActions";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { CardGrid } from "@/components/CardGrid";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { blogSystems } from "@/lib/platform-data";
+import { previewLimits } from "@/lib/access-control";
 import { contentCategories, contentReviewFields, contentReviewWorkflow, demoBlogs, professionalContributorRoles } from "@/lib/content-data";
 import { communityGroups } from "@/lib/community-groups";
 
@@ -34,15 +37,23 @@ const supportedFields = [
 ];
 
 export default function BlogPage() {
+  const visibleBlogs = demoBlogs.slice(0, previewLimits.blogs);
+
   return (
     <>
       <PageHero
         eyebrow="Creator Blog"
         title="Long-form fitness education, journals, transformation stories, and embedded platform content."
         description="Users can publish instructional articles, workout journals, nutrition journals, transformation journals, and injury recovery journals with media, tags, visibility, and moderation state."
-        primaryCta={{ label: "Write Article", href: "#write" }}
+        primaryCta={{ label: "Blog Preview", href: "#blog-library" }}
         secondaryCta={{ label: "Community", href: "/community" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section id="write" className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.9fr]">
@@ -139,17 +150,24 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="section-shell bg-black/45">
+      <section id="blog-library" className="section-shell bg-black/45">
         <div className="section-inner">
           <SectionHeader title="Blog Library" description="Reviewed articles, journals, transformation stories, nutrition notes, and recovery entries." />
           <div className="mt-6">
             <CategoryTabs categories={contentCategories} />
           </div>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {demoBlogs.map((blog) => (
-              <BlogCard key={blog.id} blog={blog} />
-            ))}
-          </div>
+          <LockedContentPreview
+            title="Blog Library Preview"
+            description="Public visitors can inspect sample blog and journal cards. Full blogs, journals, comments, saves, and creator workflows require future account access."
+            previewCount={visibleBlogs.length}
+            totalCount={demoBlogs.length}
+          >
+            <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {visibleBlogs.map((blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
     </>

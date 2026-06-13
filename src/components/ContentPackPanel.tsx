@@ -57,23 +57,29 @@ export function ContentPackPanel({
   areas,
   title = "Teaching Content Pack",
   description = "Original lesson cards, source links, image-sequence requirements, video references, and tracking prompts for this section.",
-  includeMedia = true
+  includeMedia = true,
+  lessonLimit,
+  mediaLimit
 }: {
   areas: ContentPackArea[];
   title?: string;
   description?: string;
   includeMedia?: boolean;
+  lessonLimit?: number;
+  mediaLimit?: number;
 }) {
   const lessons = getContentPackLessonsByArea(areas);
   const media = getContentPackMediaByArea(areas);
+  const visibleLessons = typeof lessonLimit === "number" ? lessons.slice(0, lessonLimit) : lessons;
+  const visibleMedia = typeof mediaLimit === "number" ? media.slice(0, mediaLimit) : media;
 
   return (
     <div className="grid gap-8">
       <SectionHeader eyebrow="Verified Content Pack" title={title} description={description} />
-      {includeMedia && media.length ? <MediaRecordGrid items={media} /> : null}
-      {lessons.length ? (
+      {includeMedia && visibleMedia.length ? <MediaRecordGrid items={visibleMedia} /> : null}
+      {visibleLessons.length ? (
         <div className="grid gap-5 lg:grid-cols-2">
-          {lessons.map((lesson) => (
+          {visibleLessons.map((lesson) => (
             <LessonCard key={lesson.title} lesson={lesson} />
           ))}
         </div>
@@ -85,18 +91,21 @@ export function ContentPackPanel({
 export function OpenWorkoutSystemsPanel({
   areas,
   title = "Open Public Workout Systems",
-  description = "Practical workout, recovery, adaptive, and mind-body templates built from public source material and original E.R. Fitness summaries."
+  description = "Practical workout, recovery, adaptive, and mind-body templates built from public source material and original E.R. Fitness summaries.",
+  limit
 }: {
   areas: ContentPackArea[];
   title?: string;
   description?: string;
+  limit?: number;
 }) {
   const systems = getOpenWorkoutSystemsByArea(areas);
+  const visibleSystems = typeof limit === "number" ? systems.slice(0, limit) : systems;
 
   return (
     <div className="grid gap-6">
       <SectionHeader eyebrow="Open Information Pack" title={title} description={description} />
-      <OpenWorkoutSystemsGrid items={systems} />
+      <OpenWorkoutSystemsGrid items={visibleSystems} />
     </div>
   );
 }
@@ -104,24 +113,28 @@ export function OpenWorkoutSystemsPanel({
 export function PublicMaterialsPanel({
   areas,
   title = "Verified Public Materials",
-  description = "Free public articles, guidelines, exercise plans, video libraries, and handouts connected to this section."
+  description = "Free public articles, guidelines, exercise plans, video libraries, and handouts connected to this section.",
+  limit
 }: {
   areas: ContentPackArea[];
   title?: string;
   description?: string;
+  limit?: number;
 }) {
   const materials = getPublicMaterialsByArea(areas);
+  const visibleMaterials = typeof limit === "number" ? materials.slice(0, limit) : materials;
 
   return (
     <div className="grid gap-6">
       <SectionHeader eyebrow="Public Materials" title={title} description={description} />
-      <PublicMaterialsGrid items={materials} />
+      <PublicMaterialsGrid items={visibleMaterials} />
     </div>
   );
 }
 
-export function ExerciseDemoPackPanel() {
+export function ExerciseDemoPackPanel({ limit }: { limit?: number }) {
   const items = getContentPackMediaByArea(["Workout & Exercise", "Injury Education", "Recovery"]);
+  const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
 
   return (
     <div className="grid gap-6">
@@ -130,7 +143,7 @@ export function ExerciseDemoPackPanel() {
         title="Real demonstration links and image-sequence requirements for core movement education."
         description="The site links to legitimate external media instead of copying photos or videos. These records define the exact frames E.R. Fitness should shoot or license for original production."
       />
-      <MediaRecordGrid items={items} />
+      <MediaRecordGrid items={visibleItems} />
     </div>
   );
 }

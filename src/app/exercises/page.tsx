@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import { Activity, Dumbbell } from "lucide-react";
 
 import { ButtonLink } from "@/components/ButtonLink";
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { ContentPackPanel, ExerciseDemoPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { EquipmentLibraryPanel } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { equipmentLibrary } from "@/lib/publish-ready-content";
+import { previewLimits } from "@/lib/access-control";
 import { buildRouteMetadata } from "@/lib/seo";
 import { exerciseLibrary, exerciseSystems, type ExerciseLibraryItem } from "@/lib/training-library";
 
@@ -62,6 +65,8 @@ function getExerciseMediaPlan(exercise: ExerciseLibraryItem) {
 }
 
 export default function ExercisesPage() {
+  const visibleExercises = exerciseLibrary.slice(0, previewLimits.exercises);
+  const visibleEquipment = equipmentLibrary.slice(0, previewLimits.equipment);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -77,9 +82,15 @@ export default function ExercisesPage() {
         eyebrow="Exercise Library"
         title="Exercise teaching cues for Bodyweight Warrior, Iron Forge, Performance Lab, and Mobility."
         description="The website teaches setup, execution, regressions, progressions, and common mistakes. The app tracks reps, load, effort, symptoms, and consistency."
-        primaryCta={{ label: "Track Exercises", href: "/dashboard?track=exercises" }}
-        secondaryCta={{ label: "Workout Library", href: "/workouts" }}
+        primaryCta={{ label: "Exercise Preview", href: "#exercise-library-preview" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
@@ -113,14 +124,22 @@ export default function ExercisesPage() {
             description="Equipment entries include best uses, coaching cues, safety notes, source fields, license fields, and searchable paths."
           />
           <div className="mt-6">
-            <EquipmentLibraryPanel items={equipmentLibrary} />
+            <LockedContentPreview
+              title="Equipment Library Preview"
+              description="Public visitors can inspect representative equipment notes while full equipment education and tracking prompts stay reserved for the app access layer."
+              previewCount={visibleEquipment.length}
+              totalCount={equipmentLibrary.length}
+              sourceNote="Source and license fields remain visible on previewed equipment records."
+            >
+              <EquipmentLibraryPanel items={visibleEquipment} />
+            </LockedContentPreview>
           </div>
         </div>
       </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner">
-          <ExerciseDemoPackPanel />
+          <ExerciseDemoPackPanel limit={previewLimits.mediaCards} />
         </div>
       </section>
 
@@ -130,6 +149,7 @@ export default function ExercisesPage() {
             areas={["Workout & Exercise", "Injury Education", "Recovery"]}
             title="Open Exercise Practice Systems"
             description="Public-source templates for bodyweight strength, video-guided strength/flex practice, and conservative return-to-training work."
+            limit={2}
           />
         </div>
       </section>
@@ -140,6 +160,8 @@ export default function ExercisesPage() {
             areas={["Workout & Exercise", "Injury Education"]}
             title="Exercise Demonstration Pack"
             description="Source-linked exercise demos, image-sequence requirements, safety boundaries, and teaching lessons for movement education."
+            lessonLimit={2}
+            mediaLimit={2}
           />
         </div>
       </section>
@@ -150,19 +172,27 @@ export default function ExercisesPage() {
             areas={["Workout & Exercise", "Injury Education", "Recovery"]}
             title="Free Exercise Demonstrations, Plans, and Rehab References"
             description="External public resources for movement photos, videos, strength plans, and orthopaedic conditioning handouts."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>
 
-      <section className="section-shell bg-graphite-950/70">
+      <section id="exercise-library-preview" className="section-shell bg-graphite-950/70">
         <div className="section-inner">
           <SectionHeader
             eyebrow="Library"
             title="Exercise entries with cues, mistakes, regressions, progressions, and tracking prompts."
             description="Each entry teaches setup, execution, common mistakes, regressions, progressions, related body areas, and app tracking prompts."
           />
-          <div className="mt-6 grid gap-5">
-            {exerciseLibrary.map((exercise) => (
+          <LockedContentPreview
+            title="Exercise Library Preview"
+            description="Public visitors see representative exercises with source tracking and media planning. Full exercise access is reserved for the future app subscriber layer."
+            previewCount={visibleExercises.length}
+            totalCount={exerciseLibrary.length}
+            sourceNote="Previewed records keep source links, review status, and licensing notes visible."
+          >
+            <div className="mt-6 grid gap-5">
+              {visibleExercises.map((exercise) => (
               <article key={exercise.slug} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
@@ -235,8 +265,9 @@ export default function ExercisesPage() {
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
     </>

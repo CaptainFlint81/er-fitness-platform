@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { ButtonLink } from "@/components/ButtonLink";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
+import { previewLimits } from "@/lib/access-control";
 import { getEducationTopic } from "@/lib/education-data";
 import { routineLibrary, routineSystems } from "@/lib/training-library";
 
@@ -15,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function RoutinesPage() {
+  const visibleRoutines = routineLibrary.slice(0, previewLimits.routines);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -30,9 +34,15 @@ export default function RoutinesPage() {
         eyebrow="Routine Library"
         title="Routine templates that connect education pages to trackable app programs."
         description="The website explains why each block exists. The app tracks completion, load, reps, effort, symptoms, readiness, and consistency."
-        primaryCta={{ label: "Start in App", href: "/dashboard?open=routine-library" }}
+        primaryCta={{ label: "Routine Preview", href: "#routine-preview" }}
         secondaryCta={{ label: "Exercise Library", href: "/exercises" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
@@ -55,15 +65,21 @@ export default function RoutinesPage() {
         </div>
       </section>
 
-      <section className="section-shell bg-black/45">
+      <section id="routine-preview" className="section-shell bg-black/45">
         <div className="section-inner">
           <SectionHeader
             eyebrow="Templates"
             title="Routine entries with educational links and tracking prompts."
             description="Each routine keeps a clear bridge between the teaching website and the tracking app."
           />
-          <div className="mt-6 grid gap-5">
-            {routineLibrary.map((routine) => {
+          <LockedContentPreview
+            title="Routine Library Preview"
+            description="Public visitors can inspect a few routine templates. Full routine building, generated routines, saved routines, and progress history belong in the app."
+            previewCount={visibleRoutines.length}
+            totalCount={routineLibrary.length}
+          >
+            <div className="mt-6 grid gap-5">
+              {visibleRoutines.map((routine) => {
               const relatedTopics = routine.relatedEducation
                 .map((slug) => getEducationTopic(slug))
                 .filter((topic): topic is NonNullable<typeof topic> => Boolean(topic));
@@ -105,8 +121,9 @@ export default function RoutinesPage() {
                   </div>
                 </article>
               );
-            })}
-          </div>
+              })}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
     </>

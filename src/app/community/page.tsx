@@ -1,7 +1,9 @@
 import { Flame, ShieldCheck, Sparkles, Users } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -29,6 +31,7 @@ import {
   trendingCommunityPosts,
   userCreatedGroupFields
 } from "@/lib/community-groups";
+import { previewLimits } from "@/lib/access-control";
 import { contentCategories, demoBlogs, demoComments, demoPosts, demoProfiles } from "@/lib/content-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -40,28 +43,47 @@ export const metadata = buildRouteMetadata({
 });
 
 export default function CommunityPage() {
+  const featuredGroups = communityGroups.filter((group) => group.featured);
+  const visibleFeaturedGroups = featuredGroups.slice(0, previewLimits.communityGroups);
+  const visiblePosts = demoPosts.slice(0, previewLimits.communityRoomItems);
+  const visibleProfiles = demoProfiles.slice(0, previewLimits.communityRoomItems);
+  const visibleBlogs = demoBlogs.slice(0, previewLimits.blogs);
+
   return (
     <>
       <PageHero
         eyebrow="Community Platform"
         title="Groups, posts, chat, blogs, media, and people who train like you."
         description="E.R. Fitness community spaces help members join groups, post, chat, blog, journal, share media, ask questions, follow creators, and stay safe with moderation tools."
-        primaryCta={{ label: "Create Post", href: "#create" }}
+        primaryCta={{ label: "Community Preview", href: "#community-preview" }}
         secondaryCta={{ label: "Browse Groups", href: "/community/groups" }}
       />
 
-      <section className="section-shell bg-graphite-950/70">
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
+
+      <section id="community-preview" className="section-shell bg-graphite-950/70">
         <div className="section-inner">
           <SectionHeader
             eyebrow="Featured Groups"
             title="Default spaces for every training style, goal, body, and support need."
             description="Each group page contains a real overview, feed, pinned posts, media, members, chat, rules, and moderation path."
           />
-          <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {communityGroups.filter((group) => group.featured).slice(0, 6).map((group) => (
-              <GroupCard key={group.id} group={group} />
-            ))}
-          </div>
+          <LockedContentPreview
+            title="Featured Group Preview"
+            description="Public visitors can inspect representative groups. Full rooms, chat, feeds, media, and members are reserved for future app account access."
+            previewCount={visibleFeaturedGroups.length}
+            totalCount={featuredGroups.length}
+          >
+            <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {visibleFeaturedGroups.map((group) => (
+                <GroupCard key={group.id} group={group} />
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -136,7 +158,7 @@ export default function CommunityPage() {
             <CategoryTabs categories={contentCategories} />
           </div>
           <div className="mt-6 grid gap-5">
-            {demoPosts.map((post) => (
+            {visiblePosts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}
           </div>
@@ -177,6 +199,7 @@ export default function CommunityPage() {
             areas={["Community Guidance"]}
             title="Open Community Activity Challenge System"
             description="A public-source framework for inclusive challenges, source-linked posts, beginner/adaptive options, check-ins, and moderation boundaries."
+            limit={1}
           />
         </div>
       </section>
@@ -187,6 +210,8 @@ export default function CommunityPage() {
             areas={["Community Guidance", "Media Rights"]}
             title="Community Guidance and Creator Source Lessons"
             description="Education for source-aware posts, safe questions, moderation signals, media rights, and useful fitness discussions."
+            lessonLimit={2}
+            mediaLimit={2}
           />
         </div>
       </section>
@@ -197,6 +222,7 @@ export default function CommunityPage() {
             areas={["Community Guidance", "Workout & Exercise", "Adaptive Fitness"]}
             title="Free Community Program Materials"
             description="Public campaign materials, community playbooks, adaptive fitness resources, and source links creators can use in posts without copying protected content."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>
@@ -219,7 +245,7 @@ export default function CommunityPage() {
           <div>
             <SectionHeader eyebrow="Creators" title="Profile cards, follows, badges, pets, XP, and report-user controls." />
             <div className="mt-6 grid gap-4">
-              {demoProfiles.map((profile) => (
+              {visibleProfiles.map((profile) => (
                 <ProfileCard key={profile.id} profile={profile} />
               ))}
             </div>
@@ -227,7 +253,7 @@ export default function CommunityPage() {
           <div>
             <SectionHeader eyebrow="Creator Blog" title="Blog and journal library." />
             <div className="mt-6 grid gap-4">
-              {demoBlogs.slice(0, 2).map((blog) => (
+              {visibleBlogs.map((blog) => (
                 <BlogCard key={blog.id} blog={blog} />
               ))}
             </div>

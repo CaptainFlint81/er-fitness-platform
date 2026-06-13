@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Flag, Images, Lock, MessageSquare, Newspaper, ShieldCheck, UsersRound } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { ButtonLink } from "@/components/ButtonLink";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
@@ -22,6 +24,7 @@ import {
   getGroupPosts,
   getGroupQuestions
 } from "@/lib/community-groups";
+import { previewLimits } from "@/lib/access-control";
 
 export function generateStaticParams() {
   return communityGroups.map((group) => ({ slug: group.slug }));
@@ -59,6 +62,13 @@ export default async function CommunityGroupPage({ params }: { params: Promise<{
   const media = getGroupMedia(group);
   const members = getGroupMembers(group);
   const messages = getGroupChat(group);
+  const visiblePosts = posts.slice(0, previewLimits.communityRoomItems);
+  const visibleQuestions = questions.slice(0, previewLimits.communityRoomItems);
+  const visibleBlogs = blogs.slice(0, previewLimits.communityRoomItems);
+  const visibleGuides = guideCards.slice(0, previewLimits.communityRoomItems);
+  const visibleMedia = media.slice(0, previewLimits.communityRoomItems);
+  const visibleMembers = members.slice(0, previewLimits.communityRoomItems);
+  const visibleMessages = messages.slice(0, previewLimits.communityRoomItems);
   const schema = {
     "@context": "https://schema.org",
     "@type": "DiscussionForumPosting",
@@ -75,8 +85,14 @@ export default async function CommunityGroupPage({ params }: { params: Promise<{
         title={group.name}
         description={group.description}
         primaryCta={{ label: "Open Room", href: "#room-tabs" }}
-        secondaryCta={{ label: "All Groups", href: "/community/groups" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section id="overview" className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -144,7 +160,23 @@ export default async function CommunityGroupPage({ params }: { params: Promise<{
 
       <section className="section-shell bg-black/45">
         <div className="section-inner">
-          <GroupTabs group={group} posts={posts} questions={questions} blogs={blogs} guideCards={guideCards} media={media} members={members} messages={messages} />
+          <LockedContentPreview
+            title={`${group.name} Room Preview`}
+            description="Public visitors can inspect a small sample of the room. Full feed, chat, media, questions, guides, members, and saved community workflows require future app account access."
+            previewCount={visiblePosts.length + visibleQuestions.length + visibleBlogs.length + visibleMedia.length + visibleMessages.length}
+            totalCount={posts.length + questions.length + blogs.length + media.length + messages.length}
+          >
+            <GroupTabs
+              group={group}
+              posts={visiblePosts}
+              questions={visibleQuestions}
+              blogs={visibleBlogs}
+              guideCards={visibleGuides}
+              media={visibleMedia}
+              members={visibleMembers}
+              messages={visibleMessages}
+            />
+          </LockedContentPreview>
         </div>
       </section>
 

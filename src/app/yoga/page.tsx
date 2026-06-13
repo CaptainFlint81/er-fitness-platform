@@ -1,11 +1,14 @@
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { MediaGrid } from "@/components/MediaGrid";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
+import { previewLimits } from "@/lib/access-control";
 import { mediaLibrary, mindBodyHighlights, yogaLevels } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -23,6 +26,9 @@ const yogaCards = yogaLevels.map((level) => ({
 }));
 
 export default function YogaPage() {
+  const yogaMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("yoga") || item.tags.includes("mobility"));
+  const visibleYogaMedia = yogaMedia.slice(0, previewLimits.mediaLibrary);
+
   return (
     <>
       <PageHero
@@ -30,15 +36,27 @@ export default function YogaPage() {
         title="Beginner, intermediate, and advanced yoga content for mobility, breath, strength, and recovery."
         description="Yoga is structured as a content category with routines, images, videos, articles, creator posts, and saved routines."
         primaryCta={{ label: "Search Yoga", href: "#yoga" }}
-        secondaryCta={{ label: "Upload Yoga Video", href: "#upload" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
       <section id="yoga" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search yoga content" />
           <TagGrid items={yogaLevels} />
           <CardGrid items={yogaCards} columns="three" />
           <CardGrid items={mindBodyHighlights.filter((item) => item.title.includes("Mobility"))} columns="three" />
-          <MediaGrid items={mediaLibrary.filter((item) => item.title.toLowerCase().includes("yoga") || item.tags.includes("mobility"))} />
+          <LockedContentPreview
+            title="Yoga Media Preview"
+            description="Public visitors can inspect sample yoga media. Full yoga routines, saved flows, reminders, and progress notes belong in the app."
+            previewCount={visibleYogaMedia.length}
+            totalCount={yogaMedia.length}
+          >
+            <MediaGrid items={visibleYogaMedia} />
+          </LockedContentPreview>
         </div>
       </section>
       <section className="section-shell bg-black/45">
@@ -47,6 +65,7 @@ export default function YogaPage() {
             areas={["Yoga"]}
             title="Open Yoga Mobility Starter System"
             description="A public-source starter template for breath, gentle mobility, supported positions, recovery context, and safe progression."
+            limit={1}
           />
         </div>
       </section>
@@ -57,6 +76,7 @@ export default function YogaPage() {
             title="Yoga Safety, Practice, and Recovery Lessons"
             description="Source-linked yoga education for breath, mobility, strength, practice selection, safety boundaries, and recovery context."
             includeMedia={false}
+            lessonLimit={2}
           />
         </div>
       </section>
@@ -66,6 +86,7 @@ export default function YogaPage() {
             areas={["Yoga", "Pilates"]}
             title="Free Yoga and Mind-Body Video References"
             description="Public NIH safety research and external public video hubs for yoga, Pilates, mobility, and recovery education."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>

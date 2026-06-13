@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { AdaptiveEducationPanel } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
@@ -13,6 +15,7 @@ import {
   getEducationCardsByCategory,
   getEducationTopicsByCategory
 } from "@/lib/education-data";
+import { previewLimits } from "@/lib/access-control";
 import { adaptiveEducationSections } from "@/lib/publish-ready-content";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -39,6 +42,9 @@ const adaptiveTags = Array.from(
 ).sort();
 
 export default function AdaptiveFitnessPage() {
+  const visibleAdaptiveSections = adaptiveEducationSections.slice(0, previewLimits.adaptiveSections);
+  const visibleAdaptiveCards = adaptiveCards.slice(0, previewLimits.educationCards);
+  const visibleConditionCards = specialConditionCards.slice(0, previewLimits.educationCards);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -60,8 +66,14 @@ export default function AdaptiveFitnessPage() {
         title="Adaptive fitness and special-condition education."
         description="Educational movement considerations for amputees, prosthetic users, wheelchair users, limited mobility users, neurological conditions, senior fitness, adaptive athletes, MS, Parkinson's, arthritis, fibromyalgia, joint replacements, chronic pain, and balance impairments."
         primaryCta={{ label: "Adaptive Topics", href: "#adaptive-topics" }}
-        secondaryCta={{ label: "Special Conditions", href: "#special-conditions" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
@@ -95,9 +107,17 @@ export default function AdaptiveFitnessPage() {
             title="Wheelchair fitness, prosthetic users, amputees, MS, Parkinson's, arthritis, fibromyalgia, chronic pain, senior fitness, and limited mobility."
             description="Each section includes focus areas, app tracking prompts, source fields, license fields, and reference links for professional review."
           />
-          <div className="mt-6">
-            <AdaptiveEducationPanel items={adaptiveEducationSections} />
-          </div>
+          <LockedContentPreview
+            title="Adaptive Fitness Section Preview"
+            description="Public visitors can review representative adaptive education records. Full adaptive libraries, modification tracking, fatigue notes, and confidence logs belong in the app access layer."
+            previewCount={visibleAdaptiveSections.length}
+            totalCount={adaptiveEducationSections.length}
+            sourceNote="Previewed adaptive records keep source and professional review metadata visible."
+          >
+            <div className="mt-6">
+              <AdaptiveEducationPanel items={visibleAdaptiveSections} />
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -107,6 +127,7 @@ export default function AdaptiveFitnessPage() {
             areas={["Adaptive Fitness", "Recovery"]}
             title="Open Adaptive and Seated Movement Systems"
             description="Public-source templates for chair-based movement, wheelchair-compatible activity, disability-aware pacing, and conservative recovery support."
+            limit={2}
           />
         </div>
       </section>
@@ -117,6 +138,8 @@ export default function AdaptiveFitnessPage() {
             areas={["Adaptive Fitness"]}
             title="Adaptive Fitness Lessons and Inclusive Video References"
             description="Conservative adaptive education for setup, options, fatigue pacing, assistive equipment, confidence tracking, and source-linked adaptive videos."
+            lessonLimit={2}
+            mediaLimit={2}
           />
         </div>
       </section>
@@ -127,6 +150,7 @@ export default function AdaptiveFitnessPage() {
             areas={["Adaptive Fitness"]}
             title="Free Adaptive Fitness and Disability-Inclusive Resources"
             description="CDC, NCHPAD, and NHS resources for chronic conditions, disabilities, wheelchair fitness, chair-based movement, and inclusive health education."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>
@@ -138,9 +162,16 @@ export default function AdaptiveFitnessPage() {
             title="Inclusive education for modified setups, equipment, progression, and tracking."
             description="Each topic links back to the reusable education page template and keeps professional-care boundaries visible."
           />
-          <div className="mt-6">
-            <CardGrid items={adaptiveCards} columns="three" />
-          </div>
+          <LockedContentPreview
+            title="Adaptive Topic Preview"
+            description="Public visitors can see sample adaptive topic cards. Full adaptive education access is reserved for future app subscribers."
+            previewCount={visibleAdaptiveCards.length}
+            totalCount={adaptiveCards.length}
+          >
+            <div className="mt-6">
+              <CardGrid items={visibleAdaptiveCards} columns="three" />
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -151,9 +182,16 @@ export default function AdaptiveFitnessPage() {
             title="Educational movement considerations for fatigue, balance, pain, joints, and neurological needs."
             description="This content is educational only and should be reviewed by qualified professionals before being treated as polished condition-specific guidance."
           />
-          <div className="mt-6">
-            <CardGrid items={specialConditionCards} columns="three" />
-          </div>
+          <LockedContentPreview
+            title="Special Condition Preview"
+            description="Public visitors can see sample special-condition topic cards. Full condition-specific education stays behind the future app access layer."
+            previewCount={visibleConditionCards.length}
+            totalCount={specialConditionCards.length}
+          >
+            <div className="mt-6">
+              <CardGrid items={visibleConditionCards} columns="three" />
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 

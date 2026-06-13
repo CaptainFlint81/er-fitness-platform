@@ -26,6 +26,7 @@ const staticRoutes = [
   "/search",
   "/tai-chi",
   "/training-nutrition-principles",
+  "/why-the-app",
   "/workouts",
   "/yoga"
 ];

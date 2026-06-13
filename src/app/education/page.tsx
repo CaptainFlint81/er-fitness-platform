@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackOverviewPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { KnowledgeResourcePanel } from "@/components/KnowledgeResourcePanel";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { ReferencedCardGrid } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
@@ -15,6 +17,7 @@ import {
   educationSearchTags,
   getEducationCardsByCategory
 } from "@/lib/education-data";
+import { previewLimits } from "@/lib/access-control";
 import { appCategoryPaths, learningPaths } from "@/lib/publish-ready-content";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -46,8 +49,14 @@ export default function EducationPage() {
         title="The website teaches. The E.R. Fitness app tracks."
         description="Use the knowledge base to learn body areas, training styles, adaptive fitness, special conditions, injury education, nutrition, recovery, and consistency systems. Then open E.R. Fitness to track actions and progress."
         primaryCta={{ label: "Search Education", href: "#education-search" }}
-        secondaryCta={{ label: "Open App Dashboard", href: "/dashboard" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section id="education-search" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
@@ -111,6 +120,7 @@ export default function EducationPage() {
             ]}
             title="Public Education Library"
             description="A verified shelf of public and external articles, guidelines, video libraries, exercise plans, and handouts that support every major E.R. Fitness education area."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>
@@ -129,6 +139,7 @@ export default function EducationPage() {
             ]}
             title="Open Public Workout and Recovery Systems"
             description="Practical templates built from public source material for general workouts, older adults, adaptive movement, return-to-training, yoga, tai chi, and community challenges."
+            limit={2}
           />
         </div>
       </section>
@@ -157,9 +168,16 @@ export default function EducationPage() {
               title={`${category} Pages`}
               description={`${getEducationCardsByCategory(category).length} completed education pages with app tracking handoff controls.`}
             />
-            <div className="mt-6">
-              <CardGrid items={getEducationCardsByCategory(category)} columns="four" />
-            </div>
+            <LockedContentPreview
+              title={`${category} Preview`}
+              description="Public visitors can inspect sample education cards. Full topic access is reserved for the future app subscriber layer."
+              previewCount={getEducationCardsByCategory(category).slice(0, previewLimits.educationCards).length}
+              totalCount={getEducationCardsByCategory(category).length}
+            >
+              <div className="mt-6">
+                <CardGrid items={getEducationCardsByCategory(category).slice(0, previewLimits.educationCards)} columns="four" />
+              </div>
+            </LockedContentPreview>
           </div>
         </section>
       ))}

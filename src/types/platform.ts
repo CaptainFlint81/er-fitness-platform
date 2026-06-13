@@ -1,4 +1,5 @@
 export type PlatformStatus = "live-ready-ui" | "supabase-ready" | "billing-disabled";
+export type AccessLevel = "public" | "preview" | "subscriber";
 
 export type FeatureCard = {
   title: string;
@@ -6,6 +7,7 @@ export type FeatureCard = {
   href?: string;
   meta?: string;
   status?: PlatformStatus;
+  accessLevel?: AccessLevel;
 };
 
 export type MediaItem = {

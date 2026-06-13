@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import { Activity, CalendarCheck, CheckCircle2, Dumbbell, Flame, HeartPulse, NotebookPen, Trophy, Zap } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CardGrid } from "@/components/CardGrid";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -57,6 +58,12 @@ export default function DashboardPage() {
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
         </div>
       </section>
 

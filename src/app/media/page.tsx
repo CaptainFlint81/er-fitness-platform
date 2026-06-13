@@ -1,3 +1,4 @@
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackOverviewPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { MediaCard } from "@/components/content/MediaCard";
@@ -5,11 +6,13 @@ import { CategoryTabs } from "@/components/content/CategoryTabs";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { MediaGrid } from "@/components/MediaGrid";
 import { KnowledgeResourcePanel } from "@/components/KnowledgeResourcePanel";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { InstructionalMediaPanel } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
+import { previewLimits } from "@/lib/access-control";
 import { demoMedia } from "@/lib/content-data";
 import { mediaArchitecture, mediaCategories, mediaLibrary, muscleGroups } from "@/lib/platform-data";
 import { instructionalMediaStructure, videoEmbedLibrary } from "@/lib/publish-ready-content";
@@ -23,15 +26,26 @@ export const metadata = buildRouteMetadata({
 });
 
 export default function MediaPage() {
+  const visibleDemoMedia = demoMedia.slice(0, previewLimits.mediaCards);
+  const visibleMediaLibrary = mediaLibrary.slice(0, previewLimits.mediaLibrary);
+  const visibleInstructionalMedia = instructionalMediaStructure.slice(0, previewLimits.mediaCards);
+  const visibleVideoEmbeds = videoEmbedLibrary.slice(0, previewLimits.mediaCards);
+
   return (
     <>
       <PageHero
         eyebrow="Media Library"
         title="Photo uploads, video uploads, demonstrations, galleries, and external creator embeds."
         description="Media is searchable by category, muscle group, user, keyword, and media type, with report buttons and moderation controls."
-        primaryCta={{ label: "Upload Media", href: "#upload" }}
-        secondaryCta={{ label: "Discover", href: "/discover" }}
+        primaryCta={{ label: "Media Preview", href: "#movement-photos" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section id="upload" className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.9fr]">
@@ -65,7 +79,15 @@ export default function MediaPage() {
             description="Each media type now carries source, license, references, rights expectations, and a routed content path."
           />
           <div className="mt-6">
-            <InstructionalMediaPanel items={instructionalMediaStructure} />
+            <LockedContentPreview
+              title="Instructional Media Preview"
+              description="Public visitors can inspect sample media structure records. Full media planning and app-linked progress media belong in the app access layer."
+              previewCount={visibleInstructionalMedia.length}
+              totalCount={instructionalMediaStructure.length}
+              sourceNote="Source and license fields remain visible on previewed records."
+            >
+              <InstructionalMediaPanel items={visibleInstructionalMedia} />
+            </LockedContentPreview>
           </div>
         </div>
       </section>
@@ -78,7 +100,15 @@ export default function MediaPage() {
             description="External videos stay hosted by the provider. E.R. Fitness stores educational context, source, license notes, tags, and review metadata."
           />
           <div className="mt-6">
-            <InstructionalMediaPanel items={videoEmbedLibrary} />
+            <LockedContentPreview
+              title="Video Embed Preview"
+              description="Public visitors can inspect sample external video records. Full video shelves and saved media workflows are reserved for future app access."
+              previewCount={visibleVideoEmbeds.length}
+              totalCount={videoEmbedLibrary.length}
+              sourceNote="External source attribution remains visible."
+            >
+              <InstructionalMediaPanel items={visibleVideoEmbeds} />
+            </LockedContentPreview>
           </div>
         </div>
       </section>
@@ -95,6 +125,7 @@ export default function MediaPage() {
             areas={["Workout & Exercise", "Recovery", "Adaptive Fitness", "Injury Education", "Yoga", "Pilates", "Tai Chi", "Community Guidance", "Media Rights"]}
             title="Legitimate Media Sources and Public Teaching Materials"
             description="External video hubs, image-sequence references, public toolkits, and source/license notes for media that can be linked now and licensed or recreated later."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>
@@ -105,11 +136,18 @@ export default function MediaPage() {
           <div className="mt-6">
             <CategoryTabs categories={["All", ...mediaCategories]} />
           </div>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {demoMedia.map((media) => (
-              <MediaCard key={media.id} media={media} />
-            ))}
-          </div>
+          <LockedContentPreview
+            title="Uploaded Media Card Preview"
+            description="Public visitors can inspect sample uploaded media cards. Full uploads, progress media, and saved media workflows belong in the app access layer."
+            previewCount={visibleDemoMedia.length}
+            totalCount={demoMedia.length}
+          >
+            <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {visibleDemoMedia.map((media) => (
+                <MediaCard key={media.id} media={media} />
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -117,7 +155,14 @@ export default function MediaPage() {
         <div className="section-inner">
           <SectionHeader title="Instructional Content Library" description="Media entries for workouts, yoga, pilates, tai chi, recovery, and nutrition." />
           <div className="mt-6">
-            <MediaGrid items={mediaLibrary} />
+            <LockedContentPreview
+              title="Instructional Content Media Preview"
+              description="Public visitors can inspect sample media entries. Full media library access is reserved for the app/subscriber layer."
+              previewCount={visibleMediaLibrary.length}
+              totalCount={mediaLibrary.length}
+            >
+              <MediaGrid items={visibleMediaLibrary} />
+            </LockedContentPreview>
           </div>
         </div>
       </section>

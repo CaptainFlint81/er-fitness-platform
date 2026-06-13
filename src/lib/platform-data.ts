@@ -12,6 +12,7 @@ export const medicalDisclaimer =
 
 export const primaryNav: RouteLink[] = [
   { label: "Dashboard", href: "/dashboard" },
+  { label: "Why the App", href: "/why-the-app" },
   { label: "Education", href: "/education" },
   { label: "Principles", href: "/training-nutrition-principles" },
   { label: "Workouts", href: "/workouts" },
@@ -1367,7 +1368,8 @@ export const footerGroups = [
     links: [
       { label: "Disclaimer", href: "/legal/disclaimer" },
       { label: "Privacy Policy", href: "/legal/privacy" },
-      { label: "Terms of Service", href: "/legal/terms" }
+      { label: "Terms of Service", href: "/legal/terms" },
+      { label: "Why the App", href: "/why-the-app" }
     ]
   }
 ];

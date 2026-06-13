@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { PlusCircle, ShieldCheck, UsersRound } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { GroupDirectorySearch } from "@/components/community/GroupDirectorySearch";
+import { previewLimits } from "@/lib/access-control";
 import {
   communityDiscoveryFilters,
   communityGroupCategories,
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function CommunityGroupsPage() {
+  const visibleGroups = communityGroups.slice(0, previewLimits.communityGroups);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -37,8 +41,14 @@ export default function CommunityGroupsPage() {
         title="Find people who train, recover, eat, compete, adapt, and progress like you."
         description="Browse default E.R. Fitness spaces for training styles, nutrition phases, adaptive fitness, recovery, sports, progress photos, transformations, challenges, and support."
         primaryCta={{ label: "Browse Groups", href: "#groups" }}
-        secondaryCta={{ label: "Community Hub", href: "/community" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
@@ -76,9 +86,16 @@ export default function CommunityGroupsPage() {
             title={`${communityGroups.length} prebuilt community spaces.`}
             description="Each group has a header, rules, post feed, pinned posts, media tab, members tab, chat tab, report controls, and group moderation support."
           />
-          <div className="mt-6">
-            <GroupDirectorySearch groups={communityGroups} categories={communityGroupCategories} />
-          </div>
+          <LockedContentPreview
+            title="Community Group Directory Preview"
+            description="Public visitors can browse a sample of default groups. Full group directory, room feeds, chat, media, and members are reserved for future app access."
+            previewCount={visibleGroups.length}
+            totalCount={communityGroups.length}
+          >
+            <div className="mt-6">
+              <GroupDirectorySearch groups={visibleGroups} categories={communityGroupCategories} />
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 

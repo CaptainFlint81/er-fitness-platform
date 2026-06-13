@@ -45,6 +45,7 @@ type MessageOverride = {
 export const englishMessages: CoreMessages = {
   navLabels: {
     Dashboard: "Dashboard",
+    "Why the App": "Why the App",
     Education: "Education",
     Principles: "Principles",
     Workouts: "Workouts",

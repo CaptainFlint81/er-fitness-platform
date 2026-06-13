@@ -1,11 +1,14 @@
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { MediaGrid } from "@/components/MediaGrid";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
+import { previewLimits } from "@/lib/access-control";
 import { mediaLibrary, mindBodyHighlights, pilatesSystems } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -23,6 +26,9 @@ const pilatesCards = pilatesSystems.map((system) => ({
 }));
 
 export default function PilatesPage() {
+  const pilatesMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("pilates") || item.tags.includes("core"));
+  const visiblePilatesMedia = pilatesMedia.slice(0, previewLimits.mediaLibrary);
+
   return (
     <>
       <PageHero
@@ -30,15 +36,27 @@ export default function PilatesPage() {
         title="Pilates routines, core control, athlete movement quality, posture, and recovery."
         description="Pilates content supports routines, images, videos, articles, saved content, comments, and creator uploads."
         primaryCta={{ label: "Search Pilates", href: "#pilates" }}
-        secondaryCta={{ label: "Create Pilates Content", href: "#upload" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
       <section id="pilates" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search pilates content" />
           <TagGrid items={pilatesSystems} />
           <CardGrid items={pilatesCards} columns="three" />
           <CardGrid items={mindBodyHighlights.filter((item) => item.title.includes("Core"))} columns="three" />
-          <MediaGrid items={mediaLibrary.filter((item) => item.title.toLowerCase().includes("pilates") || item.tags.includes("core"))} />
+          <LockedContentPreview
+            title="Pilates Media Preview"
+            description="Public visitors can inspect sample Pilates media. Full routines, saved flows, reminders, and progress notes belong in the app."
+            previewCount={visiblePilatesMedia.length}
+            totalCount={pilatesMedia.length}
+          >
+            <MediaGrid items={visiblePilatesMedia} />
+          </LockedContentPreview>
         </div>
       </section>
       <section className="section-shell bg-black/45">
@@ -48,6 +66,7 @@ export default function PilatesPage() {
             title="Pilates Core Control Lessons"
             description="Pilates education for breathing, trunk control, posture, progression, recovery support, and safe boundaries."
             includeMedia={false}
+            lessonLimit={2}
           />
         </div>
       </section>
@@ -57,6 +76,7 @@ export default function PilatesPage() {
             areas={["Pilates", "Yoga", "Workout & Exercise"]}
             title="Free Pilates, Yoga, and Core-Control References"
             description="External public video hubs and exercise libraries for Pilates-style core control, breath work, and movement quality."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>

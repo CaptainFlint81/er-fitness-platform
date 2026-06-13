@@ -1,14 +1,17 @@
 import { Dumbbell, ListPlus } from "lucide-react";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, ExerciseDemoPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
 import { KnowledgeResourcePanel } from "@/components/KnowledgeResourcePanel";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
+import { previewLimits } from "@/lib/access-control";
 import { featuredWorkoutPlans, workoutBuilderBlocks, workoutSystemCards, workoutSystems, muscleGroups } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -20,15 +23,23 @@ export const metadata = buildRouteMetadata({
 });
 
 export default function WorkoutsPage() {
+  const visibleWorkoutPlans = featuredWorkoutPlans.slice(0, previewLimits.workoutCards);
+
   return (
     <>
       <PageHero
         eyebrow="Workout Library"
         title="Bodyweight Warrior, Iron Forge, and Performance Lab workout systems."
         description="A searchable training library with workout systems, exercises, muscle groups, workout posts, uploaded form videos, saved routines, favorite workouts, and completed program mirrors."
-        primaryCta={{ label: "Workout Builder", href: "/workouts/builder" }}
-        secondaryCta={{ label: "Upload Workout Post", href: "#workout-content" }}
+        primaryCta={{ label: "Workout Preview", href: "#featured-plans" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
@@ -58,16 +69,23 @@ export default function WorkoutsPage() {
         </div>
       </section>
 
-      <section className="section-shell bg-black/45">
+      <section id="featured-plans" className="section-shell bg-black/45">
         <div className="section-inner">
           <SectionHeader
             eyebrow="Featured Plans"
             title="Ready-to-build sessions for common goals."
             description="Use these as starting points for saved routines, workout posts, favorite workouts, and progress history."
           />
-          <div className="mt-6">
-            <CardGrid items={featuredWorkoutPlans} columns="three" />
-          </div>
+          <LockedContentPreview
+            title="Workout Plan Preview"
+            description="Public visitors can see a few workout examples. Full workout planning, generated routines, saved routines, timers, reminders, and tracking stay app-first."
+            previewCount={visibleWorkoutPlans.length}
+            totalCount={featuredWorkoutPlans.length}
+          >
+            <div className="mt-6">
+              <CardGrid items={visibleWorkoutPlans} columns="three" />
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -114,7 +132,7 @@ export default function WorkoutsPage() {
 
       <section className="section-shell bg-black/45">
         <div className="section-inner">
-          <ExerciseDemoPackPanel />
+          <ExerciseDemoPackPanel limit={previewLimits.mediaCards} />
         </div>
       </section>
 
@@ -124,6 +142,7 @@ export default function WorkoutsPage() {
             areas={["Workout & Exercise", "Training Principles"]}
             title="Open Public Workout Systems"
             description="Public-source weekly templates for adult activity, beginner bodyweight strength, free video-guided practice, and progression tracking."
+            limit={2}
           />
         </div>
       </section>
@@ -134,6 +153,8 @@ export default function WorkoutsPage() {
             areas={["Workout & Exercise", "Training Principles"]}
             title="Workout Lessons, Videos, and Image Sequences"
             description="Beginner movement education, programming principles, external demonstration links, and source notes for workout planning."
+            lessonLimit={2}
+            mediaLimit={2}
           />
         </div>
       </section>
@@ -144,6 +165,7 @@ export default function WorkoutsPage() {
             areas={["Workout & Exercise", "Training Principles"]}
             title="Free Workout Guidelines, Exercise Libraries, and Video Hubs"
             description="Public and external resources for exercise basics, physical activity guidelines, movement demos, and beginner strength/flexibility videos."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>

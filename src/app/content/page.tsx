@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { ReferencedCardGrid, SearchableRecordPanel } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
@@ -17,6 +19,7 @@ import {
   reviewedContentExamples,
   scalableSearchTargets
 } from "@/lib/content-data";
+import { previewLimits } from "@/lib/access-control";
 import { professionalContributorPath, searchableContentRecords } from "@/lib/publish-ready-content";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -28,6 +31,11 @@ export const metadata: Metadata = buildRouteMetadata({
 });
 
 export default function ContentPlatformPage() {
+  const visibleSubmissionQueue = contentSubmissionQueue.slice(0, previewLimits.contentCards);
+  const visibleContributors = professionalContributors.slice(0, previewLimits.contentCards);
+  const visibleSearchableRecords = searchableContentRecords.slice(0, previewLimits.contentCards);
+  const visibleReviewedExamples = reviewedContentExamples.slice(0, previewLimits.contentCards);
+
   return (
     <>
       <PageHero
@@ -35,8 +43,14 @@ export default function ContentPlatformPage() {
         title="A scalable reviewed knowledge platform for E.R. Fitness education."
         description="The website teaches through reviewed exercises, articles, videos, images, blog posts, professional contributors, categories, references, licenses, and search-ready content records."
         primaryCta={{ label: "Search Content", href: "/search" }}
-        secondaryCta={{ label: "Review Queue", href: "/admin#review-workflow" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
 
       <section className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
@@ -84,8 +98,14 @@ export default function ContentPlatformPage() {
                 <TagGrid items={contentReviewFields} tone="orange" />
               </div>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {contentSubmissionQueue.map((submission) => (
+            <LockedContentPreview
+              title="Review Queue Preview"
+              description="Public visitors can see sample review workflow records. Full source directory, professional review queues, and publish workflows are reserved for app/account access."
+              previewCount={visibleSubmissionQueue.length}
+              totalCount={contentSubmissionQueue.length}
+            >
+              <div className="grid gap-4 md:grid-cols-2">
+                {visibleSubmissionQueue.map((submission) => (
                 <article key={submission.id} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
                   <p className="text-xs font-black uppercase text-volt-400">{submission.category} | {submission.type}</p>
                   <h2 className="mt-2 text-lg font-black text-white">{submission.title}</h2>
@@ -94,8 +114,9 @@ export default function ContentPlatformPage() {
                     {submission.review.author} | {submission.review.reviewedBy} | {submission.review.license}
                   </p>
                 </article>
-              ))}
-            </div>
+                ))}
+              </div>
+            </LockedContentPreview>
           </div>
         </div>
       </section>
@@ -112,8 +133,14 @@ export default function ContentPlatformPage() {
               <TagGrid items={professionalContributorRoles} tone="green" />
             </div>
           </div>
-          <div className="grid gap-4">
-            {professionalContributors.map((contributor) => (
+          <LockedContentPreview
+            title="Contributor Directory Preview"
+            description="Public visitors can see sample contributor roles. Full contributor records and review assignments are reserved for future account access."
+            previewCount={visibleContributors.length}
+            totalCount={professionalContributors.length}
+          >
+            <div className="grid gap-4">
+              {visibleContributors.map((contributor) => (
               <article key={contributor.id} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
                 <p className="text-xs font-black uppercase text-volt-400">{contributor.discipline}</p>
                 <h2 className="mt-2 text-lg font-black text-white">{contributor.displayName}</h2>
@@ -122,8 +149,9 @@ export default function ContentPlatformPage() {
                   <TagGrid items={contributor.specialties} tone="green" />
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 
@@ -148,7 +176,15 @@ export default function ContentPlatformPage() {
             description="Each record type includes fields for source, license, references, status, category, tags, and review metadata."
           />
           <div className="mt-6">
-            <SearchableRecordPanel items={searchableContentRecords} />
+            <LockedContentPreview
+              title="Searchable Record Preview"
+              description="Public visitors can inspect sample index records. Full source and resource directory records are reserved for the future subscriber layer."
+              previewCount={visibleSearchableRecords.length}
+              totalCount={searchableContentRecords.length}
+              sourceNote="Source, license, and review fields remain visible on previewed records."
+            >
+              <SearchableRecordPanel items={visibleSearchableRecords} />
+            </LockedContentPreview>
           </div>
         </div>
       </section>
@@ -160,18 +196,25 @@ export default function ContentPlatformPage() {
             title="Review-aware content records are ready for search indexing."
             description="These examples show how exercises, articles, videos, condition education, and contributor records enter the same search system."
           />
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {reviewedContentExamples.map((item) => (
-              <article key={item.id} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
-                <p className="text-xs font-black uppercase text-volt-400">{item.type} | {item.category}</p>
-                <h2 className="mt-2 text-lg font-black text-white">{item.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
-                <p className="mt-3 text-xs font-bold uppercase text-zinc-500">
-                  Author: {item.author} | Reviewed by: {item.reviewedBy} | Status: {item.status}
-                </p>
-              </article>
-            ))}
-          </div>
+          <LockedContentPreview
+            title="Indexed Content Example Preview"
+            description="Public visitors can inspect sample indexed records. Full reviewed examples and source directories are reserved for future app account access."
+            previewCount={visibleReviewedExamples.length}
+            totalCount={reviewedContentExamples.length}
+          >
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {visibleReviewedExamples.map((item) => (
+                <article key={item.id} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
+                  <p className="text-xs font-black uppercase text-volt-400">{item.type} | {item.category}</p>
+                  <h2 className="mt-2 text-lg font-black text-white">{item.title}</h2>
+                  <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                  <p className="mt-3 text-xs font-bold uppercase text-zinc-500">
+                    Author: {item.author} | Reviewed by: {item.reviewedBy} | Status: {item.status}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
     </>

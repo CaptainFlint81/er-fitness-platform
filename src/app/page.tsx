@@ -1,6 +1,7 @@
 import { BookOpen, Dumbbell, Search, Users, Utensils } from "lucide-react";
 
 import { AppScreens } from "@/components/AppScreens";
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CardGrid } from "@/components/CardGrid";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -28,7 +29,7 @@ export default function HomePage() {
         title="Learn on the website. Track in the E.R. Fitness app."
         description="The E.R. Fitness web companion teaches body education, training styles, adaptive fitness, injury education, nutrition, recovery, routines, and consistency systems while the app tracks progress."
         primaryCta={{ label: "Explore Education", href: "/education" }}
-        secondaryCta={{ label: "Open Dashboard", href: "/dashboard" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       >
         <AppScreens />
       </PageHero>
@@ -41,6 +42,9 @@ export default function HomePage() {
             <ButtonLink href="/nutrition" variant="secondary" icon={<Utensils size={18} aria-hidden />}>Explore Nutrition</ButtonLink>
             <ButtonLink href="/community" variant="ghost" icon={<Users size={18} aria-hidden />}>Join Community</ButtonLink>
             <ButtonLink href="/search" variant="ghost" icon={<Search size={18} aria-hidden />}>Search Platform</ButtonLink>
+          </div>
+          <div className="mt-8">
+            <AppValueCTA compact />
           </div>
           <div className="mt-10">
             <CardGrid items={homeSections} />

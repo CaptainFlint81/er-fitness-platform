@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { AlertTriangle, BookOpen, CheckCircle2 } from "lucide-react";
 
 import { AppIntegrationPanel } from "@/components/AppIntegrationPanel";
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
@@ -13,6 +15,7 @@ import {
   getEducationTopic,
   getRelatedEducationTopics
 } from "@/lib/education-data";
+import { previewLimits } from "@/lib/access-control";
 
 export function generateStaticParams() {
   return educationTopics.map((topic) => ({ slug: topic.slug }));
@@ -49,6 +52,7 @@ export default async function EducationTopicPage({ params }: { params: Promise<{
     href: `/education/${item.slug}`,
     meta: item.category
   }));
+  const visibleArticleSections = topic.articleSections.slice(0, previewLimits.articles);
 
   const schema = {
     "@context": "https://schema.org",
@@ -70,11 +74,17 @@ export default async function EducationTopicPage({ params }: { params: Promise<{
         eyebrow={topic.category}
         title={topic.title}
         description={topic.description}
-        primaryCta={{ label: "Track in App", href: `/dashboard?track=${topic.slug}` }}
+        primaryCta={{ label: "Topic Preview", href: "#topic-preview" }}
         secondaryCta={{ label: "All Education", href: "/education" }}
       />
 
-      <section className="section-shell bg-graphite-950/70">
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
+
+      <section id="topic-preview" className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <article className="rounded-md border border-white/10 bg-white/[0.045] p-5">
             <div className="flex items-center gap-3">
@@ -137,19 +147,27 @@ export default async function EducationTopicPage({ params }: { params: Promise<{
             title="Deep Dive"
             description="Original E.R. Fitness teaching notes for applying this topic with safe progression, media planning, and source review."
           />
-          <div className="mt-6 grid gap-5 lg:grid-cols-3">
-            {topic.articleSections.map((section) => (
-              <article key={section.title} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
-                <h2 className="text-lg font-black text-white">{section.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">{section.body}</p>
-                <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet} className="border-l border-volt-400/35 pl-3">{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <LockedContentPreview
+            title="Education Topic Preview"
+            description="Public visitors can read a sample deep-dive section. Full article depth, progression notes, and app tracking context are reserved for future app subscribers."
+            previewCount={visibleArticleSections.length}
+            totalCount={topic.articleSections.length}
+            sourceNote="Source references and professional review notes remain visible below."
+          >
+            <div className="mt-6 grid gap-5 lg:grid-cols-3">
+              {visibleArticleSections.map((section) => (
+                <article key={section.title} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
+                  <h2 className="text-lg font-black text-white">{section.title}</h2>
+                  <p className="mt-3 text-sm leading-6 text-zinc-300">{section.body}</p>
+                  <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet} className="border-l border-volt-400/35 pl-3">{bullet}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </LockedContentPreview>
         </div>
       </section>
 

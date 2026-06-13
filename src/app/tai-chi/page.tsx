@@ -1,11 +1,14 @@
+import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
+import { LockedContentPreview } from "@/components/LockedContentPreview";
 import { MediaGrid } from "@/components/MediaGrid";
 import { PageHero } from "@/components/PageHero";
 import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
+import { previewLimits } from "@/lib/access-control";
 import { mediaLibrary, mindBodyHighlights, taiChiSystems } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -23,6 +26,9 @@ const taiChiCards = taiChiSystems.map((system) => ({
 }));
 
 export default function TaiChiPage() {
+  const taiChiMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("tai chi") || item.tags.includes("balance"));
+  const visibleTaiChiMedia = taiChiMedia.slice(0, previewLimits.mediaLibrary);
+
   return (
     <>
       <PageHero
@@ -30,15 +36,27 @@ export default function TaiChiPage() {
         title="Tai chi forms, movement education, balance practice, breathing, and recovery."
         description="Tai chi has its own content section with forms, media, educational articles, creator posts, and searchable tags."
         primaryCta={{ label: "Search Tai Chi", href: "#tai-chi" }}
-        secondaryCta={{ label: "Create Tai Chi Content", href: "#upload" }}
+        secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppValueCTA compact />
+        </div>
+      </section>
       <section id="tai-chi" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search tai chi content" />
           <TagGrid items={taiChiSystems} />
           <CardGrid items={taiChiCards} columns="three" />
           <CardGrid items={mindBodyHighlights.filter((item) => item.title.includes("Balance"))} columns="three" />
-          <MediaGrid items={mediaLibrary.filter((item) => item.title.toLowerCase().includes("tai chi") || item.tags.includes("balance"))} />
+          <LockedContentPreview
+            title="Tai Chi Media Preview"
+            description="Public visitors can inspect sample Tai Chi media. Full routines, saved flows, reminders, and progress notes belong in the app."
+            previewCount={visibleTaiChiMedia.length}
+            totalCount={taiChiMedia.length}
+          >
+            <MediaGrid items={visibleTaiChiMedia} />
+          </LockedContentPreview>
         </div>
       </section>
       <section className="section-shell bg-black/45">
@@ -47,6 +65,7 @@ export default function TaiChiPage() {
             areas={["Tai Chi"]}
             title="Open Tai Chi Balance Starter System"
             description="A public-source starter template for supported weight shift, slow stepping, posture, breath, balance confidence, and fall-risk boundaries."
+            limit={1}
           />
         </div>
       </section>
@@ -57,6 +76,7 @@ export default function TaiChiPage() {
             title="Tai Chi Balance and Breathing Lessons"
             description="Tai chi education for slow movement, posture, balance, breath, attention, fall-risk boundaries, and active-aging context."
             includeMedia={false}
+            lessonLimit={2}
           />
         </div>
       </section>
@@ -66,6 +86,7 @@ export default function TaiChiPage() {
             areas={["Tai Chi"]}
             title="Free Tai Chi and Balance References"
             description="Public NIH tai chi research, balance exercise links, and active-aging materials for conservative movement education."
+            limit={previewLimits.publicMaterials}
           />
         </div>
       </section>

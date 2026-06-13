@@ -7,6 +7,7 @@ import { ExternalLink, PlaySquare, Search } from "lucide-react";
 
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
+import { subscriberAccessNotice } from "@/lib/access-control";
 import {
   freeFitnessResourceLibrary,
   instructionalVideoResources,
@@ -30,6 +31,10 @@ type KnowledgeResourcePanelProps = {
   visualLimit?: number;
   videoLimit?: number;
   referenceLimit?: number;
+  resourceLimit?: number;
+  sourceLimit?: number;
+  topicLimit?: number;
+  mediaSourceLimit?: number;
 };
 
 export function KnowledgeResourcePanel({
@@ -37,7 +42,11 @@ export function KnowledgeResourcePanel({
   description = "Use these resources to move from concept to example: E.R. Fitness visual maps, public instructional videos, exercise demonstrations, and credible reference links.",
   visualLimit = visualLearningResources.length,
   videoLimit = instructionalVideoResources.length,
-  referenceLimit = referenceResources.length
+  referenceLimit = referenceResources.length,
+  resourceLimit = 6,
+  sourceLimit = 6,
+  topicLimit = 6,
+  mediaSourceLimit = 6
 }: KnowledgeResourcePanelProps) {
   const [sourceQuery, setSourceQuery] = useState("");
   const [sourceCategory, setSourceCategory] = useState("All");
@@ -63,6 +72,7 @@ export function KnowledgeResourcePanel({
 
     return matchesCategory && (!query || searchable.includes(query));
   });
+  const visibleSources = filteredSources.slice(0, sourceLimit);
 
   return (
     <div className="grid gap-8">
@@ -97,10 +107,11 @@ export function KnowledgeResourcePanel({
           description="Government health references, public exercise databases, routine libraries, research tools, adaptive fitness, nutrition, youth fitness, women's fitness, and sports performance resources."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {freeFitnessResourceLibrary.map((resource) => (
+          {freeFitnessResourceLibrary.slice(0, resourceLimit).map((resource) => (
             <ResourceHubCardView key={resource.title} resource={resource} />
           ))}
         </div>
+        <LockNotice hiddenCount={Math.max(freeFitnessResourceLibrary.length - resourceLimit, 0)} label="Full Resource Library" />
       </section>
       <section className="grid gap-5">
         <SectionHeader
@@ -135,10 +146,11 @@ export function KnowledgeResourcePanel({
           </label>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filteredSources.map((resource) => (
+          {visibleSources.map((resource) => (
             <SourceDirectoryCardView key={resource.title} resource={resource} />
           ))}
         </div>
+        <LockNotice hiddenCount={Math.max(filteredSources.length - visibleSources.length, 0)} label="Full Source Directory" />
       </section>
       <section className="grid gap-5">
         <SectionHeader
@@ -147,10 +159,11 @@ export function KnowledgeResourcePanel({
           description="These hubs plan the required educational areas with related routines, app sections, source links, review status, and media placeholders."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {topicHubResources.map((resource) => (
+          {topicHubResources.slice(0, topicLimit).map((resource) => (
             <ResourceHubCardView key={resource.title} resource={resource} />
           ))}
         </div>
+        <LockNotice hiddenCount={Math.max(topicHubResources.length - topicLimit, 0)} label="Full Topic Hub Library" />
       </section>
       <section className="grid gap-5">
         <SectionHeader
@@ -159,10 +172,11 @@ export function KnowledgeResourcePanel({
           description="No media is downloaded here. These records identify candidate sources, license notes, attribution needs, commercial use checks, modification checks, and preferred link/embed behavior."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {mediaSourceDirectory.map((source) => (
+          {mediaSourceDirectory.slice(0, mediaSourceLimit).map((source) => (
             <MediaSourceCard key={source.sourceName} source={source} />
           ))}
         </div>
+        <LockNotice hiddenCount={Math.max(mediaSourceDirectory.length - mediaSourceLimit, 0)} label="Full Media Source Directory" />
       </section>
       <section className="rounded-md border border-ember-500/30 bg-ember-500/8 p-5">
         <h2 className="text-sm font-black uppercase text-ember-400">Educational Disclaimer</h2>
@@ -181,6 +195,17 @@ export function KnowledgeResourcePanel({
         />
         <TagGrid items={resourceHubSeoKeywords} tone="green" />
       </section>
+    </div>
+  );
+}
+
+function LockNotice({ hiddenCount, label }: { hiddenCount: number; label: string }) {
+  if (hiddenCount <= 0) return null;
+
+  return (
+    <div className="rounded-md border border-ember-500/30 bg-ember-500/8 p-4">
+      <p className="text-xs font-black uppercase text-ember-400">{label} Locked</p>
+      <p className="mt-2 text-sm leading-6 text-zinc-300">{hiddenCount} additional records are hidden from public preview. {subscriberAccessNotice}</p>
     </div>
   );
 }
