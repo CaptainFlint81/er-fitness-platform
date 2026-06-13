@@ -5,12 +5,10 @@ import { Award, Flame, UserPlus } from "lucide-react";
 import { useState } from "react";
 
 import type { CreatorProfile } from "@/types/content";
-import { formatCount } from "@/lib/content-utils";
 import { ReportButton } from "@/components/content/ReportButton";
 
 export function ProfileCard({ profile }: { profile: CreatorProfile }) {
   const [following, setFollowing] = useState(false);
-  const followerCount = profile.followers + (following ? 1 : 0);
 
   return (
     <article className="overflow-hidden rounded-md border border-white/10 bg-white/[0.045]">
@@ -32,7 +30,7 @@ export function ProfileCard({ profile }: { profile: CreatorProfile }) {
             }`}
           >
             <UserPlus size={14} aria-hidden />
-            {following ? "Following" : "Follow"}
+            {following ? "Preview Selected" : "Follow Preview"}
           </button>
         </div>
         <div className="mt-4">
@@ -40,19 +38,20 @@ export function ProfileCard({ profile }: { profile: CreatorProfile }) {
             {profile.displayName}
           </Link>
           <p className="text-sm font-bold text-ember-400">@{profile.username} | {profile.role}</p>
+          <p className="mt-2 text-xs font-black uppercase text-zinc-500">Preview persona, not a live user account</p>
           <p className="mt-3 text-sm leading-6 text-zinc-400">{profile.bio}</p>
         </div>
         <div className="mt-5 grid grid-cols-3 gap-2 text-center">
           <div className="rounded-md border border-white/10 bg-black/25 p-2">
-            <p className="text-sm font-black text-white">{formatCount(followerCount)}</p>
+            <p className="text-sm font-black text-white">Future</p>
             <p className="text-xs text-zinc-500">Followers</p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/25 p-2">
-            <p className="text-sm font-black text-white">{formatCount(profile.xp)}</p>
+            <p className="text-sm font-black text-white">App</p>
             <p className="text-xs text-zinc-500">XP</p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/25 p-2">
-            <p className="text-sm font-black text-white">{profile.streak}</p>
+            <p className="text-sm font-black text-white">App</p>
             <p className="text-xs text-zinc-500">Streak</p>
           </div>
         </div>
@@ -66,6 +65,9 @@ export function ProfileCard({ profile }: { profile: CreatorProfile }) {
             {profile.titles[0]}
           </span>
         </div>
+        <p className="mt-3 text-xs font-bold text-zinc-500" aria-live="polite">
+          {following ? "Follow preview selected. No follower count or account relationship was changed." : "Follow actions require future account access."}
+        </p>
         <div className="mt-4">
           <ReportButton target="user" />
         </div>

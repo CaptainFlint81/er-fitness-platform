@@ -3,8 +3,6 @@
 import { UserCheck, UserPlus } from "lucide-react";
 import { useState } from "react";
 
-import { formatCount } from "@/lib/content-utils";
-
 type GroupJoinButtonProps = {
   groupName: string;
   initialMembers: number;
@@ -12,8 +10,8 @@ type GroupJoinButtonProps = {
 };
 
 export function GroupJoinButton({ groupName, initialMembers, compact = false }: GroupJoinButtonProps) {
+  void initialMembers;
   const [joined, setJoined] = useState(false);
-  const memberCount = initialMembers + (joined ? 1 : 0);
   const Icon = joined ? UserCheck : UserPlus;
 
   return (
@@ -29,10 +27,10 @@ export function GroupJoinButton({ groupName, initialMembers, compact = false }: 
         }`}
       >
         <Icon size={17} aria-hidden />
-        {joined ? "Leave Group" : "Join Group"}
+        {joined ? "Preview Selected" : "Join Preview"}
       </button>
       <p className={`${compact ? "sr-only" : "text-xs font-bold text-zinc-500"}`} aria-live="polite">
-        {joined ? `Joined ${groupName} for this session.` : `${formatCount(memberCount)} members in ${groupName}.`}
+        {joined ? `${groupName} preview selected. No membership was changed.` : `${groupName} membership opens when account access is enabled.`}
       </p>
     </div>
   );

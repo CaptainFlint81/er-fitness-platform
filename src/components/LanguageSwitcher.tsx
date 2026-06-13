@@ -17,12 +17,12 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <label className={`inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/6 text-sm font-bold text-zinc-200 ${compact ? "px-2 py-2" : "px-3 py-2"}`}>
-      <Languages size={16} className="text-volt-400" aria-hidden />
+    <label className={`inline-flex min-h-11 shrink-0 items-center gap-2 rounded-md border border-white/10 bg-white/6 text-sm font-bold text-zinc-200 ${compact ? "px-2 py-2" : "px-3 py-2"}`}>
+      <Languages size={16} className="shrink-0 text-volt-400" aria-hidden />
       <span className={compact ? "sr-only" : "hidden sm:inline"}>{messages.actions.language}</span>
       <select
         aria-label={messages.actions.language}
-        className="max-w-36 bg-transparent text-sm font-bold text-white outline-none"
+        className={`${compact ? "max-w-32" : "max-w-44"} min-w-0 bg-transparent text-sm font-bold text-white outline-none`}
         onChange={(event) => changeLanguage(event.target.value as Locale)}
         value={locale}
       >

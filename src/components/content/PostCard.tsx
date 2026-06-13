@@ -18,7 +18,7 @@ export function PostCard({ post }: { post: CommunityPost }) {
           </div>
           <div>
             <p className="font-black text-white">{author.displayName}</p>
-            <p className="text-sm text-zinc-500">@{author.username} | {author.role}</p>
+            <p className="text-sm text-zinc-500">Preview persona | @{author.username} | {author.role}</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-2">

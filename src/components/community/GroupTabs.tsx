@@ -26,7 +26,7 @@ import { ProfileCard } from "@/components/content/ProfileCard";
 import { ReportButton } from "@/components/content/ReportButton";
 import { EmojiReactionBar } from "@/components/community/EmojiReactionBar";
 import { demoProfiles } from "@/lib/content-data";
-import { findProfile, formatCount } from "@/lib/content-utils";
+import { findProfile } from "@/lib/content-utils";
 import type { BlogPost, CommunityGroup, CommunityPost, ContentMedia, CreatorProfile, GroupChatMessage } from "@/types/content";
 
 type GroupGuideCard = {
@@ -65,23 +65,16 @@ const postLanes = [
   "External source links"
 ];
 
-function getTier(profile: CreatorProfile) {
-  if (profile.xp >= 90000) return "Volt Elite";
-  if (profile.xp >= 40000) return "Iron Tier";
-  if (profile.xp >= 15000) return "Builder Tier";
-  return "Starter Tier";
-}
-
 function IdentityBadges({ profile }: { profile: CreatorProfile }) {
   return (
     <div className="mt-2 flex flex-wrap gap-2">
       <span className="inline-flex items-center gap-1 rounded-md border border-volt-400/30 bg-volt-400/10 px-2 py-1 text-xs font-bold text-volt-300">
         <PawPrint size={13} aria-hidden />
-        {profile.pet.name} L{profile.pet.level}
+        {profile.pet.name} preview
       </span>
       <span className="inline-flex items-center gap-1 rounded-md border border-white/10 bg-black/25 px-2 py-1 text-xs font-bold text-zinc-300">
         <Sparkles size={13} aria-hidden />
-        {getTier(profile)}
+        Tier preview
       </span>
       <span className="inline-flex items-center gap-1 rounded-md border border-ember-500/30 bg-ember-500/10 px-2 py-1 text-xs font-bold text-ember-400">
         <Award size={13} aria-hidden />
@@ -89,7 +82,7 @@ function IdentityBadges({ profile }: { profile: CreatorProfile }) {
       </span>
       <span className="inline-flex items-center gap-1 rounded-md border border-white/10 bg-black/25 px-2 py-1 text-xs font-bold text-zinc-300">
         <Flame size={13} aria-hidden />
-        {profile.streak} day streak
+        App streak preview
       </span>
     </div>
   );
@@ -136,7 +129,7 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
             icon={<MessageSquare size={24} aria-hidden />}
             eyebrow="Feed"
             title={`${group.name} feed`}
-            description="Member posts combine training updates, photos, videos, tips, questions, transformation notes, nutrition posts, saves, comments, shares, and reports."
+            description="Preview posts model training updates, photos, videos, tips, questions, transformation notes, nutrition posts, saves, comments, shares, and reports without live activity counts."
           />
           {posts.map((post) => (
             <PostCard key={`${group.id}-${post.id}`} post={post} />
@@ -205,7 +198,7 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
         </aside>
 
         <div className="grid gap-4">
-          {messages.map((message, index) => {
+          {messages.map((message) => {
             const author = findProfile(demoProfiles, message.authorId);
 
             return (
@@ -217,7 +210,7 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
                     </div>
                     <div>
                       <p className="font-black text-white">{author.displayName}</p>
-                      <p className="text-sm text-zinc-500">@{author.username} | {author.role}</p>
+                      <p className="text-sm text-zinc-500">Preview persona | @{author.username} | {author.role}</p>
                       <IdentityBadges profile={author} />
                     </div>
                   </div>
@@ -234,14 +227,7 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
                 </div>
                 <p className="mt-5 text-sm leading-6 text-zinc-300">{message.body}</p>
                 <div className="mt-5 flex flex-col gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-start lg:justify-between">
-                  <EmojiReactionBar
-                    reactions={[
-                      { emoji: "🔥", label: "Fire", initialCount: 5 + index },
-                      { emoji: "💪", label: "Strong", initialCount: 9 + index },
-                      { emoji: "✅", label: "Helpful", initialCount: 4 + index },
-                      { emoji: "⚡", label: "Volt", initialCount: 2 + index }
-                    ]}
-                  />
+                  <EmojiReactionBar />
                   <div className="flex flex-wrap gap-2">
                     <a href="#composer" className="inline-flex min-h-9 items-center justify-center gap-2 rounded-md border border-white/10 bg-black/25 px-3 text-xs font-black uppercase text-zinc-300 transition hover:border-volt-400/50 hover:text-volt-300">
                       <Reply size={14} aria-hidden />
@@ -275,7 +261,7 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
           icon={<HelpCircle size={24} aria-hidden />}
           eyebrow="Questions"
           title="Ask with context and get better answers"
-          description="Question posts support comments, saves, reports, replies through the composer, and enough context for useful community guidance."
+          description="Question posts preview comments, saves, reports, replies through the composer, and enough context for useful community guidance."
         />
         <div className="grid gap-5 lg:grid-cols-2">
           {questions.map((post) => (
@@ -313,8 +299,8 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
         <RoomHeading
           icon={<UsersRound size={24} aria-hidden />}
           eyebrow="Members"
-          title={`${formatCount(group.members)} members, moderators, pets, tiers, badges, and streaks`}
-          description="Member cards connect profiles, follows, report-user controls, companion pets, XP, streaks, titles, and moderator roles."
+          title="Preview members, moderators, pets, tiers, badges, and app-only streaks"
+          description="Member cards are preview personas. Live follows, member totals, XP, streaks, and moderator assignments require future account access."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {members.map((member) => member.profile ? (

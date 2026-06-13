@@ -4,12 +4,11 @@ import { Bookmark, Heart, MessageCircle, Repeat2, Share2 } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import type { ReactionSummary } from "@/types/content";
-import { formatCount } from "@/lib/content-utils";
 
 type SocialActionKey = keyof ReactionSummary | "reposts";
 
 export function SocialShareBar({ reactions }: { reactions: ReactionSummary }) {
-  const [counts, setCounts] = useState({ ...reactions, reposts: 0 });
+  void reactions;
   const [active, setActive] = useState<Record<SocialActionKey, boolean>>({
     likes: false,
     comments: false,
@@ -17,26 +16,22 @@ export function SocialShareBar({ reactions }: { reactions: ReactionSummary }) {
     saves: false,
     reposts: false
   });
-  const [status, setStatus] = useState("Use these controls to interact with this content.");
+  const [status, setStatus] = useState("Preview controls only. No social action is recorded.");
 
   const actions = useMemo(
-    (): Array<{ key: SocialActionKey; label: string; icon: typeof Heart; count: number }> => [
-      { key: "likes", label: "Like", icon: Heart, count: counts.likes },
-      { key: "comments", label: "Comment", icon: MessageCircle, count: counts.comments },
-      { key: "shares", label: "Share", icon: Share2, count: counts.shares },
-      { key: "saves", label: "Save", icon: Bookmark, count: counts.saves },
-      { key: "reposts", label: "Repost", icon: Repeat2, count: counts.reposts }
+    (): Array<{ key: SocialActionKey; label: string; icon: typeof Heart }> => [
+      { key: "likes", label: "Like", icon: Heart },
+      { key: "comments", label: "Comment", icon: MessageCircle },
+      { key: "shares", label: "Share", icon: Share2 },
+      { key: "saves", label: "Save", icon: Bookmark },
+      { key: "reposts", label: "Repost", icon: Repeat2 }
     ],
-    [counts]
+    []
   );
 
   function handleAction(key: SocialActionKey, label: string) {
-    setCounts((current) => ({
-      ...current,
-      [key]: current[key] + (active[key] ? -1 : 1)
-    }));
     setActive((current) => ({ ...current, [key]: !current[key] }));
-    setStatus(`${label} ${active[key] ? "removed" : "saved"} for this session.`);
+    setStatus(`${label} preview ${active[key] ? "cleared" : "selected"}. No reaction, comment, share, save, or repost was recorded.`);
   }
 
   return (
@@ -60,7 +55,6 @@ export function SocialShareBar({ reactions }: { reactions: ReactionSummary }) {
             >
               <Icon size={15} aria-hidden />
               <span>{action.label}</span>
-              {action.count ? <span className="text-zinc-500">{formatCount(action.count)}</span> : null}
             </button>
           );
         })}

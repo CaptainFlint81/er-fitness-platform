@@ -9,6 +9,7 @@ const staticRoutes = [
   "/admin",
   "/adaptive-fitness",
   "/community",
+  "/community/questions",
   "/content",
   "/dashboard",
   "/education",

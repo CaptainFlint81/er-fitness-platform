@@ -16,24 +16,25 @@ const defaultReactions: EmojiReaction[] = [
 ];
 
 export function EmojiReactionBar({ reactions = defaultReactions }: { reactions?: EmojiReaction[] }) {
+  void reactions;
   const [active, setActive] = useState<Record<string, boolean>>({});
-  const [status, setStatus] = useState("React to this message.");
+  const [status, setStatus] = useState("Reaction preview only. No reaction is recorded.");
+  const labels = defaultReactions.map((reaction) => reaction.label);
 
   return (
     <div className="grid gap-2">
       <div className="flex flex-wrap gap-2">
-        {reactions.map((reaction) => {
-          const selected = Boolean(active[reaction.label]);
-          const count = reaction.initialCount + (selected ? 1 : 0);
+        {labels.map((label) => {
+          const selected = Boolean(active[label]);
 
           return (
             <button
-              key={reaction.label}
+              key={label}
               type="button"
               aria-pressed={selected}
               onClick={() => {
-                setActive((current) => ({ ...current, [reaction.label]: !selected }));
-                setStatus(`${reaction.label} reaction ${selected ? "removed" : "added"} for this session.`);
+                setActive((current) => ({ ...current, [label]: !selected }));
+                setStatus(`${label} preview ${selected ? "cleared" : "selected"}. No reaction was recorded.`);
               }}
               className={`inline-flex min-h-9 items-center justify-center gap-2 rounded-md border px-3 text-xs font-black uppercase ${
                 selected
@@ -41,9 +42,7 @@ export function EmojiReactionBar({ reactions = defaultReactions }: { reactions?:
                   : "border-white/10 bg-black/25 text-zinc-300 hover:border-volt-400/50 hover:text-volt-300"
               }`}
             >
-              <span aria-hidden>{reaction.emoji}</span>
-              <span>{reaction.label}</span>
-              <span className="text-zinc-500">{count}</span>
+              <span>{label}</span>
             </button>
           );
         })}

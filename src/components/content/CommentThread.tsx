@@ -12,7 +12,7 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
   const author = findProfile(demoProfiles, comment.authorId);
   const [liked, setLiked] = useState(false);
   const [replyOpen, setReplyOpen] = useState(false);
-  const likeCount = comment.reactions.likes + (liked ? 1 : 0);
+  void comment.reactions;
 
   return (
     <div className={`${depth ? "ml-5 border-l border-white/10 pl-4" : ""}`}>
@@ -24,7 +24,7 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
             </div>
             <div>
               <p className="text-sm font-black text-white">{author.displayName}</p>
-              <p className="text-xs text-zinc-500">{comment.createdAt} | {comment.status}</p>
+              <p className="text-xs text-zinc-500">Preview persona | {comment.createdAt} | {comment.status}</p>
             </div>
           </div>
           <ReportButton target="comment" />
@@ -39,7 +39,7 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
               liked ? "border-volt-400 bg-volt-400/12 text-volt-300" : "border-white/10 bg-white/5 text-zinc-300"
             }`}
           >
-            Like {likeCount}
+            Like preview
           </button>
           <button
             type="button"
@@ -52,7 +52,7 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
         </div>
         {replyOpen ? (
           <label className="mt-3 grid gap-2 text-xs font-bold uppercase text-zinc-400">
-            Reply preview
+            Reply preview, not posted
             <textarea
               rows={3}
               placeholder={`Reply to ${author.displayName}`}
@@ -73,7 +73,7 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
 }
 
 export function CommentThread({ comments }: { comments: Comment[] }) {
-  const [status, setStatus] = useState("Comment form is ready.");
+  const [status, setStatus] = useState("Comment preview is closed to real posting.");
 
   return (
     <section className="rounded-md border border-white/10 bg-white/[0.045] p-5">
@@ -81,7 +81,7 @@ export function CommentThread({ comments }: { comments: Comment[] }) {
         <MessageSquare size={22} className="text-volt-400" aria-hidden />
         <div>
           <h2 className="text-lg font-black text-white">Comment Thread</h2>
-          <p className="text-sm text-zinc-500">Threaded comments, likes, replies, and reports are ready for review workflows.</p>
+          <p className="text-sm text-zinc-500">Threaded comments, likes, replies, and reports are preview-only until account access and moderation are enabled.</p>
         </div>
       </div>
       <div className="mt-5 grid gap-3">
@@ -101,7 +101,7 @@ export function CommentThread({ comments }: { comments: Comment[] }) {
         />
         <button
           type="button"
-          onClick={() => setStatus("Comment preview updated for the visible thread workflow.")}
+          onClick={() => setStatus("Preview only. No comment was submitted.")}
           className="min-h-11 rounded-md bg-ember-500 px-4 text-sm font-black uppercase text-graphite-950 hover:bg-ember-400"
         >
           Preview Comment

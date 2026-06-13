@@ -25,7 +25,7 @@ export function BlogCard({ blog }: { blog: BlogPost }) {
       <h3 className="mt-2 text-xl font-black text-white">{blog.title}</h3>
       <p className="mt-3 text-sm leading-6 text-zinc-400">{blog.excerpt}</p>
       <div className="mt-4 flex flex-wrap gap-3 text-xs font-bold text-zinc-500">
-        <span>@{author.username}</span>
+        <span>Preview author @{author.username}</span>
         <span className="inline-flex items-center gap-1"><Clock size={13} aria-hidden />{blog.readTime}</span>
         <span>{blog.tags.join(", ")}</span>
       </div>

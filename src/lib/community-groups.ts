@@ -232,15 +232,15 @@ export function getGroupGuideCards(group: CommunityGroup) {
 }
 
 export const trendingCommunityPosts = [
-  { title: "Day 90 recomp check-in", group: "Transformation Stories", metric: "512 likes", href: "/community/groups/transformation-stories" },
-  { title: "Bench setup cues that fixed shoulder position", group: "Powerlifting", metric: "93 saves", href: "/community/groups/powerlifting" },
-  { title: "Meal prep for lean bulk weeks", group: "Meal Prep", metric: "146 saves", href: "/community/groups/meal-prep" },
-  { title: "Return-to-training after knee irritation", group: "Injured Athlete", metric: "38 replies", href: "/community/groups/injured-athlete" }
+  { title: "Day 90 recomp check-in", group: "Transformation Stories", metric: "Preview discussion", href: "/community/groups/transformation-stories" },
+  { title: "Bench setup cues that fixed shoulder position", group: "Powerlifting", metric: "Preview save workflow", href: "/community/groups/powerlifting" },
+  { title: "Meal prep for lean bulk weeks", group: "Meal Prep", metric: "Preview nutrition post", href: "/community/groups/meal-prep" },
+  { title: "Return-to-training after knee irritation", group: "Injured Athlete", metric: "Preview Q&A thread", href: "/community/groups/injured-athlete" }
 ];
 
 export const transformationHighlights = [
   { title: "Day 30 consistency win", group: "Transformation Stories", detail: "First milestone wall completed", href: "/community/groups/transformation-stories" },
-  { title: "Progress photo privacy setup", group: "Progress Photos", detail: "Followers-only gallery shared", href: "/community/groups/progress-photos" },
+  { title: "Progress photo privacy setup", group: "Progress Photos", detail: "Visibility workflow preview", href: "/community/groups/progress-photos" },
   { title: "Recovery comeback note", group: "Injured Athlete", detail: "Returned to controlled lower-body training", href: "/community/groups/injured-athlete" }
 ];
 

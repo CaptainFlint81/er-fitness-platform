@@ -110,15 +110,15 @@ export default async function CommunityGroupPage({ params }: { params: Promise<{
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 <div className="rounded-md border border-white/10 bg-black/25 p-3">
                   <p className="text-xs uppercase text-zinc-500">Members</p>
-                  <p className="mt-1 text-xl font-black text-white">{group.members.toLocaleString()}</p>
+                  <p className="mt-1 text-xl font-black text-white">Future</p>
                 </div>
                 <div className="rounded-md border border-white/10 bg-black/25 p-3">
                   <p className="text-xs uppercase text-zinc-500">Moderators</p>
-                  <p className="mt-1 text-xl font-black text-white">{group.moderators.length}</p>
+                  <p className="mt-1 text-xl font-black text-white">Planned</p>
                 </div>
                 <div className="rounded-md border border-white/10 bg-black/25 p-3">
                   <p className="text-xs uppercase text-zinc-500">Channels</p>
-                  <p className="mt-1 text-xl font-black text-white">{group.channels.length}</p>
+                  <p className="mt-1 text-xl font-black text-white">Preview</p>
                 </div>
               </div>
               <div className="mt-5 flex flex-wrap gap-3">

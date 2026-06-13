@@ -25,11 +25,11 @@ export function GroupCard({ group }: { group: CommunityGroup }) {
         <div className="mt-4 flex flex-wrap gap-3 text-sm font-bold text-zinc-300">
           <span className="inline-flex items-center gap-2">
             <UsersRound size={17} className="text-ember-400" aria-hidden />
-            {group.members.toLocaleString()} members
+            Member access future
           </span>
           <span className="inline-flex items-center gap-2">
             <MessageSquare size={17} className="text-volt-400" aria-hidden />
-            {group.channels.length} channels
+            Channels previewed
           </span>
         </div>
         <div className="mt-4">

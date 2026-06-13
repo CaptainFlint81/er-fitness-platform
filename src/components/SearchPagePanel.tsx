@@ -103,7 +103,7 @@ const searchResults: SearchResult[] = [
       title: profile.displayName,
       description: profile.bio,
       href: `/profile/${profile.username}`,
-      source: "Creator profile",
+      source: "Profile preview persona",
       tags: [profile.username, profile.role, profile.goal, ...profile.badges, ...profile.titles]
     })
   ),

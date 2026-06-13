@@ -177,7 +177,7 @@ export default function CommunityPage() {
                 items={[
                   { title: "Introduce Yourself", description: "Share your training goal, experience level, preferred groups, and what support you need.", href: "/community/groups/beginners", meta: "Start here" },
                   { title: "Find Your Space", description: "Browse default groups by training style, nutrition goal, sport, condition, or support need.", href: "/community/groups", meta: "Groups" },
-                  { title: "Ask a Question", description: "Use Questions & Help for training, nutrition, recovery, app, and safety questions.", href: "/community/groups/questions-help", meta: "Help" },
+                  { title: "Ask a Question", description: "Use the preview-only Q&A foundation for training, nutrition, recovery, app, and safety questions.", href: "/community/questions", meta: "Q&A Preview" },
                   { title: "Post Progress", description: "Share progress photos, transformations, milestones, wins, or comeback notes with visibility controls.", href: "/community/groups/progress-photos", meta: "Progress" }
                 ]}
                 columns="two"
