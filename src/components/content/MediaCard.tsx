@@ -27,7 +27,7 @@ export function MediaCard({ media }: { media: ContentMedia }) {
             </span>
           ) : null}
           <span className="rounded-md border border-white/10 bg-black/25 px-2 py-1 text-xs font-bold text-zinc-300">
-            Upload-ready
+            Preview only
           </span>
         </div>
         <div className="mt-4">

@@ -229,10 +229,10 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
                 <div className="mt-5 flex flex-col gap-3 border-t border-white/10 pt-4 lg:flex-row lg:items-start lg:justify-between">
                   <EmojiReactionBar />
                   <div className="flex flex-wrap gap-2">
-                    <a href="#composer" className="inline-flex min-h-9 items-center justify-center gap-2 rounded-md border border-white/10 bg-black/25 px-3 text-xs font-black uppercase text-zinc-300 transition hover:border-volt-400/50 hover:text-volt-300">
+                    <button type="button" disabled className="inline-flex min-h-9 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-black/25 px-3 text-xs font-black uppercase text-zinc-400">
                       <Reply size={14} aria-hidden />
-                      Reply
-                    </a>
+                      Reply preview
+                    </button>
                     <ReportButton target="message" />
                   </div>
                 </div>
@@ -246,8 +246,8 @@ export function GroupTabs({ group, posts, questions, blogs, guideCards, media, m
         <RoomHeading
           icon={<ImageIcon size={24} aria-hidden />}
           eyebrow="Media"
-          title="Photos, videos, embeds, and reviewable uploads"
-          description="The media tab shows progress photos, exercise clips, external source embeds, storage-ready titles, media reports, and gallery organization."
+          title="Photos, videos, embeds, and reviewable media previews"
+          description="The media tab shows sample progress photos, exercise clips, external source embeds, storage-ready titles, media reports, and gallery organization without enabling upload."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {media.map((item) => (

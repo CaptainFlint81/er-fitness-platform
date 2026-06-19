@@ -90,10 +90,13 @@ export default function BlogPage() {
             </div>
           </div>
           <form className="grid gap-4 rounded-md border border-white/10 bg-white/[0.045] p-5">
+            <p className="rounded-md border border-ember-500/25 bg-ember-500/8 px-3 py-2 text-xs font-black uppercase text-ember-400">
+              Preview only. Blog and journal submission are disabled until account access is live.
+            </p>
             <div className="grid gap-4 md:grid-cols-2">
               <label className="grid gap-2 text-sm font-bold text-zinc-200">
                 Journal type
-                <select className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400" defaultValue="Workout journals">
+                <select disabled className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55" defaultValue="Workout journals">
                   {journalTypes.map((type) => (
                     <option key={type}>{type}</option>
                   ))}
@@ -101,7 +104,7 @@ export default function BlogPage() {
               </label>
               <label className="grid gap-2 text-sm font-bold text-zinc-200">
                 Group
-                <select className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400" defaultValue="General Fitness">
+                <select disabled className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55" defaultValue="General Fitness">
                   {communityGroups.slice(0, 12).map((group) => (
                     <option key={group.id}>{group.name}</option>
                   ))}
@@ -110,14 +113,14 @@ export default function BlogPage() {
             </div>
             <label className="grid gap-2 text-sm font-bold text-zinc-200">
               Title
-              <input className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400" placeholder="Training week notes, meal prep recap, or transformation milestone" />
+              <input disabled className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55" placeholder="Training week notes, meal prep recap, or transformation milestone" />
             </label>
             <label className="grid gap-2 text-sm font-bold text-zinc-200">
               Body
-              <textarea className="min-h-32 rounded-md border border-white/10 bg-black/40 px-3 py-3 text-white outline-none focus:border-volt-400" placeholder="Write the journal body, lesson, story, or educational notes." />
+              <textarea disabled className="min-h-32 rounded-md border border-white/10 bg-black/40 px-3 py-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55" placeholder="Write the journal body, lesson, story, or educational notes." />
             </label>
-            <AttachmentControls compact />
-            <ComposerStatusActions publishLabel="Show Blog Review Path" />
+            <AttachmentControls compact previewOnly />
+            <ComposerStatusActions publishLabel="Show Blog Review Path" previewOnly />
           </form>
         </div>
       </section>

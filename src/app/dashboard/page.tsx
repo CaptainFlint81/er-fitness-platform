@@ -27,17 +27,17 @@ export default function DashboardPage() {
         <div className="section-inner">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-end">
             <div>
-              <p className="text-sm font-black uppercase text-volt-400">Dashboard</p>
+              <p className="text-sm font-black uppercase text-volt-400">Dashboard Preview</p>
               <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-                Today plan for training, recovery, nutrition, and community.
+                Preview plan for training, recovery, nutrition, and community.
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
-                A member-facing overview for readiness, routines, streaks, XP, saved content, progress media, and the next actions that keep the app and website aligned.
+                A member-facing preview for readiness, routines, streaks, XP, saved content, progress media, and the next actions that keep the app and website aligned. Live account data belongs in the app/backend.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <ButtonLink href="/workouts/builder" icon={<Dumbbell size={18} aria-hidden />}>Build Routine</ButtonLink>
+                <ButtonLink href="/workouts/builder" icon={<Dumbbell size={18} aria-hidden />}>Builder Preview</ButtonLink>
                 <ButtonLink href="/profile/er-athlete" variant="secondary" icon={<Activity size={18} aria-hidden />}>View Profile</ButtonLink>
-                <ButtonLink href="/community/chat" variant="ghost" icon={<NotebookPen size={18} aria-hidden />}>Post Update</ButtonLink>
+                <ButtonLink href="/community/chat" variant="ghost" icon={<NotebookPen size={18} aria-hidden />}>Update Preview</ButtonLink>
               </div>
             </div>
 
@@ -52,6 +52,7 @@ export default function DashboardPage() {
                       <Icon size={22} className={index % 2 === 0 ? "text-volt-400" : "text-ember-400"} aria-hidden />
                     </div>
                     <p className="mt-4 text-4xl font-black text-white">{stat.value}</p>
+                    <p className="mt-1 text-xs font-black uppercase text-ember-400">Sample metric</p>
                     <p className="mt-3 text-sm leading-6 text-zinc-400">{stat.detail}</p>
                   </article>
                 );

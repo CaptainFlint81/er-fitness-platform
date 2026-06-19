@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import { Award, Flame, UserPlus } from "lucide-react";
-import { useState } from "react";
 
 import type { CreatorProfile } from "@/types/content";
 import { ReportButton } from "@/components/content/ReportButton";
 
 export function ProfileCard({ profile }: { profile: CreatorProfile }) {
-  const [following, setFollowing] = useState(false);
-
   return (
     <article className="overflow-hidden rounded-md border border-white/10 bg-white/[0.045]">
       <div className="h-20 bg-[linear-gradient(135deg,rgba(255,106,0,0.32),rgba(140,255,0,0.22)),#191b1f]" />
@@ -23,14 +20,11 @@ export function ProfileCard({ profile }: { profile: CreatorProfile }) {
           </Link>
           <button
             type="button"
-            aria-pressed={following}
-            onClick={() => setFollowing((value) => !value)}
-            className={`inline-flex min-h-9 items-center gap-2 rounded-md px-3 text-xs font-black uppercase ${
-              following ? "border border-volt-400 bg-volt-400/12 text-volt-300" : "bg-volt-400 text-graphite-950"
-            }`}
+            disabled
+            className="inline-flex min-h-9 cursor-not-allowed items-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-400"
           >
             <UserPlus size={14} aria-hidden />
-            {following ? "Preview Selected" : "Follow Preview"}
+            Preview only
           </button>
         </div>
         <div className="mt-4">
@@ -66,7 +60,7 @@ export function ProfileCard({ profile }: { profile: CreatorProfile }) {
           </span>
         </div>
         <p className="mt-3 text-xs font-bold text-zinc-500" aria-live="polite">
-          {following ? "Follow preview selected. No follower count or account relationship was changed." : "Follow actions require future account access."}
+          Follow actions require future account access. No follower count or account relationship is changed here.
         </p>
         <div className="mt-4">
           <ReportButton target="user" />

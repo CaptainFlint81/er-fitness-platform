@@ -1,7 +1,4 @@
-"use client";
-
 import { MessageSquare } from "lucide-react";
-import { useState } from "react";
 
 import { demoProfiles } from "@/lib/content-data";
 import { findProfile } from "@/lib/content-utils";
@@ -10,8 +7,6 @@ import { ReportButton } from "@/components/content/ReportButton";
 
 function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number }) {
   const author = findProfile(demoProfiles, comment.authorId);
-  const [liked, setLiked] = useState(false);
-  const [replyOpen, setReplyOpen] = useState(false);
   void comment.reactions;
 
   return (
@@ -33,33 +28,19 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
         <div className="mt-3 flex gap-2">
           <button
             type="button"
-            aria-pressed={liked}
-            onClick={() => setLiked((value) => !value)}
-            className={`rounded-md border px-2 py-1 text-xs font-bold ${
-              liked ? "border-volt-400 bg-volt-400/12 text-volt-300" : "border-white/10 bg-white/5 text-zinc-300"
-            }`}
+            disabled
+            className="cursor-not-allowed rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-bold text-zinc-400"
           >
             Like preview
           </button>
           <button
             type="button"
-            aria-expanded={replyOpen}
-            onClick={() => setReplyOpen((value) => !value)}
-            className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-bold text-zinc-300 hover:border-ember-500/45"
+            disabled
+            className="cursor-not-allowed rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-bold text-zinc-400"
           >
-            {replyOpen ? "Close Reply" : "Reply"}
+            Reply coming soon
           </button>
         </div>
-        {replyOpen ? (
-          <label className="mt-3 grid gap-2 text-xs font-bold uppercase text-zinc-400">
-            Reply preview, not posted
-            <textarea
-              rows={3}
-              placeholder={`Reply to ${author.displayName}`}
-              className="rounded-md border border-white/10 bg-black/35 p-3 text-sm normal-case text-white outline-none placeholder:text-zinc-500 focus:border-volt-400"
-            />
-          </label>
-        ) : null}
       </div>
       {comment.replies?.length ? (
         <div className="mt-3 grid gap-3">
@@ -73,8 +54,6 @@ function CommentItem({ comment, depth = 0 }: { comment: Comment; depth?: number 
 }
 
 export function CommentThread({ comments }: { comments: Comment[] }) {
-  const [status, setStatus] = useState("Comment preview is closed to real posting.");
-
   return (
     <section className="rounded-md border border-white/10 bg-white/[0.045] p-5">
       <div className="flex items-center gap-3">
@@ -96,18 +75,19 @@ export function CommentThread({ comments }: { comments: Comment[] }) {
         <textarea
           id="comment"
           rows={4}
+          disabled
           placeholder="Write a comment, coaching note, question, or progress reply..."
-          className="rounded-md border border-white/10 bg-black/35 p-3 text-sm text-white outline-none placeholder:text-zinc-500 focus:border-volt-400"
+          className="rounded-md border border-white/10 bg-black/35 p-3 text-sm text-white outline-none placeholder:text-zinc-500 focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
         />
         <button
           type="button"
-          onClick={() => setStatus("Preview only. No comment was submitted.")}
-          className="min-h-11 rounded-md bg-ember-500 px-4 text-sm font-black uppercase text-graphite-950 hover:bg-ember-400"
+          disabled
+          className="min-h-11 cursor-not-allowed rounded-md border border-white/10 bg-white/6 px-4 text-sm font-black uppercase text-zinc-400"
         >
-          Preview Comment
+          Comments coming soon
         </button>
         <p className="rounded-md border border-ember-500/25 bg-ember-500/8 px-3 py-2 text-sm font-bold text-ember-400" aria-live="polite">
-          {status}
+          Preview only. No comment is submitted or stored from this website.
         </p>
       </form>
     </section>

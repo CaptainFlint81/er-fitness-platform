@@ -156,7 +156,7 @@ export function KnowledgeResourcePanel({
         <SectionHeader
           eyebrow="Topic Hubs"
           title="Structured education hubs ready for more lessons"
-          description="These hubs plan the required educational areas with related routines, app sections, source links, review status, and media placeholders."
+          description="These hubs plan the required educational areas with related routines, app sections, source links, review status, and media slots."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {topicHubResources.slice(0, topicLimit).map((resource) => (

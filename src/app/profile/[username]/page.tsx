@@ -33,9 +33,9 @@ export default async function ProfilePage({ params }: { params: Promise<{ userna
       <PageHero
         eyebrow={`@${profile.username}`}
         title={profile.displayName}
-        description={`${profile.bio} Current goal: ${profile.goal}. Selected pet: ${profile.pet.name}, level ${profile.pet.level}.`}
+        description={`${profile.bio} Preview persona for profile layout, content, and app-linked milestones. Current goal: ${profile.goal}.`}
         primaryCta={{ label: "View Content", href: "#profile-content" }}
-        secondaryCta={{ label: "Message", href: "/community/chat" }}
+        secondaryCta={{ label: "Chat Preview", href: "/community/chat" }}
       />
 
       <section className="section-shell bg-graphite-950/70">
@@ -57,15 +57,15 @@ export default async function ProfilePage({ params }: { params: Promise<{ userna
                   </div>
                   <div className="rounded-md border border-white/10 bg-black/25 p-3">
                     <p className="text-xs uppercase text-zinc-500">Leaderboard</p>
-                    <p className="mt-1 text-sm font-black text-white">{profileDemo.leaderboardRank}</p>
+                    <p className="mt-1 text-sm font-black text-white">Preview only</p>
                   </div>
                   <div className="rounded-md border border-white/10 bg-black/25 p-3">
                     <p className="text-xs uppercase text-zinc-500">Total XP</p>
-                    <p className="mt-1 text-sm font-black text-white">{profile.xp.toLocaleString()}</p>
+                    <p className="mt-1 text-sm font-black text-white">App preview</p>
                   </div>
                   <div className="rounded-md border border-white/10 bg-black/25 p-3">
                     <p className="text-xs uppercase text-zinc-500">Streak</p>
-                    <p className="mt-1 text-sm font-black text-white">{profile.streak} days</p>
+                    <p className="mt-1 text-sm font-black text-white">App preview</p>
                   </div>
                 </div>
                 <div className="mt-5">
@@ -79,16 +79,16 @@ export default async function ProfilePage({ params }: { params: Promise<{ userna
                 <Flame size={22} className="text-volt-400" aria-hidden />
                 <h2 className="text-lg font-black text-white">Pet Companion</h2>
               </div>
-              <p className="mt-3 text-sm text-zinc-300">{profile.pet.name} | Level {profile.pet.level} | {profile.pet.xp.toLocaleString()} pet XP</p>
+              <p className="mt-3 text-sm text-zinc-300">{profile.pet.name} | pet level and XP are app-preview data only.</p>
             </div>
           </aside>
 
           <div id="profile-content" className="space-y-8">
             <div className="grid gap-4 md:grid-cols-3">
               {[
-                { label: "Followers", value: profile.followers.toLocaleString(), icon: BadgeCheck },
-                { label: "Following", value: profile.following.toLocaleString(), icon: Medal },
-                { label: "Accolades", value: profileDemo.accolades.length.toString(), icon: Trophy }
+                { label: "Followers", value: "App only", icon: BadgeCheck },
+                { label: "Following", value: "App only", icon: Medal },
+                { label: "Accolades", value: "Preview", icon: Trophy }
               ].map((stat) => {
                 const Icon = stat.icon;
 

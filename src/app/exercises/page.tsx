@@ -108,8 +108,8 @@ export default function ExercisesPage() {
                 <SectionHeader title="App Handoff" description="Open the app dashboard to track selected exercises, loads, symptoms, and progress notes." />
               </div>
               <div className="mt-5 flex flex-wrap gap-3">
-                <ButtonLink href="/dashboard?open=exercise-library">Open in ER Fitness</ButtonLink>
-                <ButtonLink href="/dashboard?track=exercise-library" variant="secondary">Track in ER Fitness</ButtonLink>
+                <ButtonLink href="/dashboard?open=exercise-library">Dashboard Preview</ButtonLink>
+                <ButtonLink href="/dashboard?track=exercise-library" variant="secondary">Tracking Handoff Preview</ButtonLink>
               </div>
             </div>
           </div>

@@ -11,8 +11,8 @@ export default function LeaderboardsPage() {
     <>
       <PageHero
         eyebrow="Leaderboards"
-        title="XP, reps, challenges, streaks, and pet XP rankings."
-        description="Leaderboard cards show global, friends, and group ranking scopes with profile identity, streaks, pets, and app-synced scoring."
+        title="Leaderboard preview for XP, reps, challenges, streaks, and pet XP."
+        description="Leaderboard cards use sample profile data to show future global, friends, and group ranking scopes. No live ranking or app-synced scoring is active on the website."
         primaryCta={{ label: "View Profile", href: "/profile/er-athlete" }}
         secondaryCta={{ label: "Challenges", href: "/challenges" }}
       />
@@ -28,7 +28,7 @@ export default function LeaderboardsPage() {
           <div className="rounded-md border border-white/10 bg-white/[0.045] p-5">
             <div className="flex items-center gap-3">
               <Trophy size={24} className="text-ember-400" aria-hidden />
-              <h2 className="text-xl font-black text-white">XP Leaderboard</h2>
+              <h2 className="text-xl font-black text-white">Demo XP Leaderboard</h2>
             </div>
             <div className="mt-5 grid gap-3">
               {demoProfiles
@@ -36,12 +36,12 @@ export default function LeaderboardsPage() {
                 .sort((a, b) => b.xp - a.xp)
                 .map((profile, index) => (
                   <div key={profile.id} className="grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-md border border-white/10 bg-black/25 p-4">
-                    <p className="text-xl font-black text-volt-400">#{index + 1}</p>
+                    <p className="text-xl font-black text-volt-400">Preview #{index + 1}</p>
                     <div>
                       <p className="font-black text-white">{profile.displayName}</p>
-                      <p className="text-sm text-zinc-500">{profile.pet.name} | streak {profile.streak}</p>
+                      <p className="text-sm text-zinc-500">{profile.pet.name} | sample streak</p>
                     </div>
-                    <p className="font-black text-white">{profile.xp.toLocaleString()} XP</p>
+                    <p className="font-black text-white">{profile.xp.toLocaleString()} demo XP</p>
                   </div>
                 ))}
             </div>

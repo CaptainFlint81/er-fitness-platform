@@ -1310,7 +1310,7 @@ export const appMirrorFeatures: FeatureCard[] = [
   { title: "Adaptive Fitness", description: "Adaptive and special-condition education for modified movement, equipment considerations, safety reminders, and app tracking handoffs.", href: "/adaptive-fitness" },
   { title: "Exercise Library", description: "Exercise teaching cues, setup, regressions, progressions, body areas, and app tracking prompts.", href: "/exercises" },
   { title: "Routine Library", description: "Trackable routine templates that connect education pages to workouts, recovery, adaptive movement, and nutrition.", href: "/routines" },
-  { title: "Community Groups", description: "Join spaces for training styles, nutrition goals, adaptive fitness, sports, transformations, challenges, and support.", href: "/community/groups" },
+  { title: "Community Groups", description: "Browse preview spaces for training styles, nutrition goals, adaptive fitness, sports, transformations, challenges, and support.", href: "/community/groups" },
   { title: "Dashboard", description: "Today plan, readiness, streaks, XP, saved content, quick actions, and recent activity.", href: "/dashboard" },
   { title: "Workouts", description: "Library, builder, saved routines, favorite workouts, completed programs, workout history.", href: "/workouts" },
   { title: "Nutrition", description: "Meal plans, food library, macros, grocery lists, hydration, nutrition history.", href: "/nutrition" },
@@ -1369,6 +1369,9 @@ export const footerGroups = [
       { label: "Disclaimer", href: "/legal/disclaimer" },
       { label: "Privacy Policy", href: "/legal/privacy" },
       { label: "Terms of Service", href: "/legal/terms" },
+      { label: "Support", href: "/support" },
+      { label: "Data Deletion", href: "/data-deletion" },
+      { label: "Google Play Support", href: "/google-play-support" },
       { label: "Why the App", href: "/why-the-app" }
     ]
   }

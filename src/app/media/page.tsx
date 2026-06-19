@@ -35,8 +35,8 @@ export default function MediaPage() {
     <>
       <PageHero
         eyebrow="Media Library"
-        title="Photo uploads, video uploads, demonstrations, galleries, and external creator embeds."
-        description="Media is searchable by category, muscle group, user, keyword, and media type, with report buttons and moderation controls."
+        title="Media previews, demonstrations, galleries, and external creator embeds."
+        description="Media is searchable by category, muscle group, keyword, and media type, with report-preview buttons and moderation planning controls. Uploads are disabled until backend storage is live."
         primaryCta={{ label: "Media Preview", href: "#movement-photos" }}
         secondaryCta={{ label: "Why the App", href: "/why-the-app" }}
       />
@@ -49,7 +49,7 @@ export default function MediaPage() {
 
       <section id="upload" className="section-shell bg-graphite-950/70">
         <div className="section-inner grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-          <UploadPanel title="Upload Photos, Videos, and Embeds" />
+          <UploadPanel title="Media Workflow Preview" />
           <div className="space-y-5">
             <SearchFilters label="Search media assets" />
             <TagGrid items={mediaCategories} />

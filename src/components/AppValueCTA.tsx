@@ -38,7 +38,7 @@ export function AppValueCTA({
         </div>
         <div className="flex flex-wrap gap-3">
           <ButtonLink href="/why-the-app">Why the App</ButtonLink>
-          <ButtonLink href="/dashboard" variant="secondary">App Preview</ButtonLink>
+          <ButtonLink href="/dashboard" variant="secondary">Dashboard Preview</ButtonLink>
         </div>
       </div>
       {compact ? null : (

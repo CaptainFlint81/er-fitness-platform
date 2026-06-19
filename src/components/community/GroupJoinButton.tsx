@@ -1,7 +1,4 @@
-"use client";
-
-import { UserCheck, UserPlus } from "lucide-react";
-import { useState } from "react";
+import { UserPlus } from "lucide-react";
 
 type GroupJoinButtonProps = {
   groupName: string;
@@ -11,26 +8,19 @@ type GroupJoinButtonProps = {
 
 export function GroupJoinButton({ groupName, initialMembers, compact = false }: GroupJoinButtonProps) {
   void initialMembers;
-  const [joined, setJoined] = useState(false);
-  const Icon = joined ? UserCheck : UserPlus;
 
   return (
     <div className="grid gap-2">
       <button
         type="button"
-        aria-pressed={joined}
-        onClick={() => setJoined((value) => !value)}
-        className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-black uppercase transition ${
-          joined
-            ? "border border-volt-400 bg-volt-400/12 text-volt-300 hover:border-volt-300"
-            : "bg-volt-400 text-graphite-950 hover:bg-volt-300"
-        }`}
+        disabled
+        className="inline-flex min-h-11 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-4 text-sm font-black uppercase text-zinc-400"
       >
-        <Icon size={17} aria-hidden />
-        {joined ? "Preview Selected" : "Join Preview"}
+        <UserPlus size={17} aria-hidden />
+        Preview only
       </button>
       <p className={`${compact ? "sr-only" : "text-xs font-bold text-zinc-500"}`} aria-live="polite">
-        {joined ? `${groupName} preview selected. No membership was changed.` : `${groupName} membership opens when account access is enabled.`}
+        {`${groupName} membership opens when account access is enabled. No join action is active on this website preview.`}
       </p>
     </div>
   );

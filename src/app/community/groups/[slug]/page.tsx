@@ -124,7 +124,7 @@ export default async function CommunityGroupPage({ params }: { params: Promise<{
               <div className="mt-5 flex flex-wrap gap-3">
                 <GroupJoinButton groupName={group.name} initialMembers={group.members} />
                 <ButtonLink href="#feed" icon={<Newspaper size={17} aria-hidden />}>Read Feed</ButtonLink>
-                <ButtonLink href="#chat" variant="secondary" icon={<MessageSquare size={17} aria-hidden />}>Open Chat</ButtonLink>
+                <ButtonLink href="#chat" variant="secondary" icon={<MessageSquare size={17} aria-hidden />}>Chat Preview</ButtonLink>
                 <ButtonLink href="#media" variant="ghost" icon={<Images size={17} aria-hidden />}>View Media</ButtonLink>
                 <ButtonLink href="#members" variant="ghost" icon={<UsersRound size={17} aria-hidden />}>Members</ButtonLink>
                 <ButtonLink href="#rules" variant="ghost" icon={<ShieldCheck size={17} aria-hidden />}>Rules</ButtonLink>

@@ -1,32 +1,28 @@
-"use client";
+ "use client";
 
 import { FileText, Send } from "lucide-react";
-import { useState } from "react";
 
 import { AttachmentControls } from "@/components/content/AttachmentControls";
 import { VisibilitySelector } from "@/components/content/VisibilitySelector";
 import type { CommunityGroup } from "@/types/content";
 
 export function GroupComposer({ group }: { group: CommunityGroup }) {
-  const [postType, setPostType] = useState("progress-update");
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [previewMessage, setPreviewMessage] = useState("Choose a content type, write a title, attach media if needed, and preview the group workflow.");
+  const previewMessage = "Preview only. Group posts, media attachments, and moderation routing are disabled until account access is enabled.";
 
   return (
     <section id="composer" className="rounded-md border border-white/10 bg-white/[0.045] p-5">
       <div className="flex items-center gap-3">
         <Send size={22} className="text-volt-400" aria-hidden />
-        <h2 className="text-lg font-black text-white">Create Post in {group.name}</h2>
+        <h2 className="text-lg font-black text-white">Post Preview in {group.name}</h2>
       </div>
-      <form className="mt-5 grid gap-4">
+      <form className="mt-5 grid gap-4" onSubmit={(event) => event.preventDefault()}>
         <div className="grid gap-4 md:grid-cols-2">
           <label className="grid gap-2 text-sm font-bold text-zinc-200">
             Post type
             <select
-              className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400"
-              value={postType}
-              onChange={(event) => setPostType(event.target.value)}
+              disabled
+              className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
+              defaultValue="progress-update"
             >
               <option value="progress-update">Progress update</option>
               <option value="workout-tip">Workout tip</option>
@@ -43,39 +39,33 @@ export function GroupComposer({ group }: { group: CommunityGroup }) {
               <option value="external-social-link">External social link</option>
             </select>
           </label>
-          <VisibilitySelector />
+          <VisibilitySelector disabled />
         </div>
         <label className="grid gap-2 text-sm font-bold text-zinc-200">
           Title
           <input
-            className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400"
+            disabled
+            className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
             placeholder="Share a training update, question, journal, or tip"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
           />
         </label>
         <label className="grid gap-2 text-sm font-bold text-zinc-200">
           Body
           <textarea
-            className="min-h-32 rounded-md border border-white/10 bg-black/40 px-3 py-3 text-white outline-none focus:border-volt-400"
+            disabled
+            className="min-h-32 rounded-md border border-white/10 bg-black/40 px-3 py-3 text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
             placeholder="Write the post body, coaching notes, journal entry, question context, or transformation update."
-            value={body}
-            onChange={(event) => setBody(event.target.value)}
           />
         </label>
-        <AttachmentControls compact />
+        <AttachmentControls compact previewOnly />
         <div className="grid gap-3">
           <button
             type="button"
-            onClick={() => {
-              const titleText = title.trim() || "Untitled draft";
-              const bodyState = body.trim() ? "body captured" : "body still needed";
-              setPreviewMessage(`${group.name} ${postType.replaceAll("-", " ")} preview: "${titleText}" with ${bodyState}, visibility, media, source review, and moderation routing.`);
-            }}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-volt-400 px-4 text-sm font-black uppercase text-graphite-950 hover:bg-volt-300"
+            disabled
+            className="inline-flex min-h-11 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-4 text-sm font-black uppercase text-zinc-400"
           >
             <FileText size={17} aria-hidden />
-            Preview Post
+            Posting coming soon
           </button>
           <p className="rounded-md border border-volt-400/25 bg-volt-400/8 px-3 py-2 text-sm font-bold text-volt-300" aria-live="polite">
             {previewMessage}

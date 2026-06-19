@@ -30,7 +30,7 @@ export default function WhyTheAppPage() {
         eyebrow="Why the App"
         title="The website is the companion knowledge hub. The app is the training system."
         description={websiteAppValueMessage}
-        primaryCta={{ label: "App Preview", href: "/dashboard" }}
+        primaryCta={{ label: "Dashboard Preview", href: "/dashboard" }}
         secondaryCta={{ label: "Education Preview", href: "/education" }}
       />
 

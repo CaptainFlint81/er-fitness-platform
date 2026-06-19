@@ -12,8 +12,8 @@ export default function PetsPage() {
     <>
       <PageHero
         eyebrow="Pets"
-        title="Selected pet, pet level, pet XP, profile display, and pet showcase."
-        description="The web platform mirrors mobile pet companion data for pet XP boosts, challenge rewards, collections, titles, and profile showcases."
+        title="Pet companion preview for profile display and app rewards."
+        description="The web platform previews mobile pet companion concepts. Live pet level, pet XP, challenge rewards, collections, and titles belong in the app."
         primaryCta={{ label: "Profile Pet", href: "/profile/er-athlete" }}
         secondaryCta={{ label: "Pet XP Leaderboard", href: "/leaderboards" }}
       />
@@ -41,7 +41,7 @@ export default function PetsPage() {
                     <Flame size={22} className="text-volt-400" aria-hidden />
                     <h2 className="text-lg font-black text-white">{profile.pet.name}</h2>
                   </div>
-                  <p className="mt-3 text-sm text-zinc-400">@{profile.username} | Level {profile.pet.level} | {profile.pet.xp.toLocaleString()} pet XP</p>
+                  <p className="mt-3 text-sm text-zinc-400">@{profile.username} | app-preview pet progression only</p>
                   <div className="mt-4">
                     <TagGrid items={profile.titles} />
                   </div>

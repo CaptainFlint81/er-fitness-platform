@@ -40,7 +40,7 @@ export default function HomePage() {
             <ButtonLink href="/education" icon={<BookOpen size={18} aria-hidden />}>Explore Education</ButtonLink>
             <ButtonLink href="/workouts" icon={<Dumbbell size={18} aria-hidden />}>Explore Workouts</ButtonLink>
             <ButtonLink href="/nutrition" variant="secondary" icon={<Utensils size={18} aria-hidden />}>Explore Nutrition</ButtonLink>
-            <ButtonLink href="/community" variant="ghost" icon={<Users size={18} aria-hidden />}>Join Community</ButtonLink>
+            <ButtonLink href="/community" variant="ghost" icon={<Users size={18} aria-hidden />}>Community Preview</ButtonLink>
             <ButtonLink href="/search" variant="ghost" icon={<Search size={18} aria-hidden />}>Search Platform</ButtonLink>
           </div>
           <div className="mt-8">

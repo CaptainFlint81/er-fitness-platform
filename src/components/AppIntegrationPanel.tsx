@@ -18,13 +18,13 @@ export function AppIntegrationPanel({ topic }: AppIntegrationPanelProps) {
       <p className="mt-3 text-sm leading-6 text-zinc-300">{topic.trackingPrompt}</p>
       <div className="mt-5 flex flex-wrap gap-3">
         <ButtonLink href={`/dashboard?open=${topicParam}`} icon={<ExternalLink size={17} aria-hidden />}>
-          Open in ER Fitness
+          Dashboard Preview
         </ButtonLink>
         <ButtonLink href={`/dashboard?track=${topicParam}`} variant="secondary" icon={<Route size={17} aria-hidden />}>
-          Track in ER Fitness
+          Tracking Handoff Preview
         </ButtonLink>
         <ButtonLink href={`${topic.relatedHref}?program=${programParam}`} variant="ghost" icon={<PlayCircle size={17} aria-hidden />}>
-          Start Related Program
+          Related Program Preview
         </ButtonLink>
         <ButtonLink href={topic.relatedHref} variant="ghost" icon={<Dumbbell size={17} aria-hidden />}>
           Related Workout Category

@@ -35,7 +35,7 @@ const attachmentOptions: Array<{
   }
 ];
 
-export function AttachmentControls({ compact = false }: { compact?: boolean }) {
+export function AttachmentControls({ compact = false, previewOnly = false }: { compact?: boolean; previewOnly?: boolean }) {
   const [activeMode, setActiveMode] = useState<AttachmentMode>("photo");
   const selected = attachmentOptions.find((option) => option.mode === activeMode) ?? attachmentOptions[0];
 
@@ -51,8 +51,9 @@ export function AttachmentControls({ compact = false }: { compact?: boolean }) {
               key={option.mode}
               type="button"
               aria-pressed={isActive}
+              disabled={previewOnly}
               onClick={() => setActiveMode(option.mode)}
-              className={`inline-flex ${compact ? "min-h-11" : "min-h-24 flex-col"} items-center justify-center gap-2 rounded-md border px-4 text-sm font-black uppercase transition ${
+              className={`inline-flex ${compact ? "min-h-11" : "min-h-24 flex-col"} items-center justify-center gap-2 rounded-md border px-4 text-sm font-black uppercase transition disabled:cursor-not-allowed disabled:opacity-55 ${
                 isActive
                   ? "border-volt-400 bg-volt-400/14 text-volt-300"
                   : "border-white/10 bg-white/6 text-white hover:border-ember-500/50"
@@ -70,11 +71,14 @@ export function AttachmentControls({ compact = false }: { compact?: boolean }) {
           {selected.inputLabel}
           <input
             type={activeMode === "external-link" ? "url" : "text"}
+            disabled={previewOnly}
             placeholder={activeMode === "external-link" ? "https://odphp.health.gov/moveyourway" : "Example: day-90-progress-photo"}
-            className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-sm text-white outline-none placeholder:text-zinc-500 focus:border-volt-400"
+            className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-sm text-white outline-none placeholder:text-zinc-500 focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
           />
         </label>
-        <p className="mt-3 text-xs font-bold text-zinc-500">{selected.helper}</p>
+        <p className="mt-3 text-xs font-bold text-zinc-500">
+          {previewOnly ? "Preview only. Upload and external-link submission are disabled until storage and moderation are live." : selected.helper}
+        </p>
       </div>
     </div>
   );

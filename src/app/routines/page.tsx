@@ -57,8 +57,8 @@ export default function RoutinesPage() {
             <div className="rounded-md border border-volt-400/25 bg-volt-400/8 p-5">
               <SectionHeader title="App Handoff" description="Use the app dashboard to start a routine, track completion, and attach notes." />
               <div className="mt-5 flex flex-wrap gap-3">
-                <ButtonLink href="/dashboard?open=routine-library">Open in ER Fitness</ButtonLink>
-                <ButtonLink href="/dashboard?track=routine-library" variant="secondary">Track in ER Fitness</ButtonLink>
+                <ButtonLink href="/dashboard?open=routine-library">Dashboard Preview</ButtonLink>
+                <ButtonLink href="/dashboard?track=routine-library" variant="secondary">Tracking Handoff Preview</ButtonLink>
               </div>
             </div>
           </div>
@@ -93,8 +93,8 @@ export default function RoutinesPage() {
                       <p className="mt-3 max-w-4xl text-sm leading-6 text-zinc-400">{routine.goal}</p>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      <ButtonLink href={`/dashboard?open=${routine.slug}`} variant="secondary">Open in ER Fitness</ButtonLink>
-                      <ButtonLink href={`/dashboard?track=${routine.slug}`} variant="ghost">Track</ButtonLink>
+                      <ButtonLink href={`/dashboard?open=${routine.slug}`} variant="secondary">Routine Preview</ButtonLink>
+                      <ButtonLink href={`/dashboard?track=${routine.slug}`} variant="ghost">Tracking Preview</ButtonLink>
                     </div>
                   </div>
                   <div className="mt-5 grid gap-4 lg:grid-cols-4">

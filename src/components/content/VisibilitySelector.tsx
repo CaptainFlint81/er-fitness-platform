@@ -6,9 +6,10 @@ import type { Visibility } from "@/types/content";
 type VisibilitySelectorProps = {
   defaultValue?: Visibility;
   label?: string;
+  disabled?: boolean;
 };
 
-export function VisibilitySelector({ defaultValue = "public", label = "Visibility" }: VisibilitySelectorProps) {
+export function VisibilitySelector({ defaultValue = "public", label = "Visibility", disabled = false }: VisibilitySelectorProps) {
   return (
     <label className="grid gap-2 text-sm font-bold text-zinc-200">
       <span className="inline-flex items-center gap-2">
@@ -17,7 +18,8 @@ export function VisibilitySelector({ defaultValue = "public", label = "Visibilit
       </span>
       <select
         defaultValue={defaultValue}
-        className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-sm text-white outline-none focus:border-volt-400"
+        disabled={disabled}
+        className="h-11 rounded-md border border-white/10 bg-black/40 px-3 text-sm text-white outline-none focus:border-volt-400 disabled:cursor-not-allowed disabled:opacity-55"
       >
         {visibilityOptions.map((option) => (
           <option key={option.value} value={option.value}>

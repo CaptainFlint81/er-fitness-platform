@@ -14,9 +14,9 @@ export default function TransformationsPage() {
     <>
       <PageHero
         eyebrow="Transformation Center"
-        title="Upload photos, upload videos, build timelines, and publish progress stories."
+        title="Preview progress timelines, galleries, and transformation stories."
         description="Transformation content supports Day 1 through final milestones, progress galleries, transformation walls, stories, comments, likes, shares, saves, and visibility controls."
-        primaryCta={{ label: "Upload Progress", href: "#upload" }}
+        primaryCta={{ label: "Progress Preview", href: "#upload" }}
         secondaryCta={{ label: "Profile Wall", href: "/profile/er-athlete" }}
       />
 

@@ -57,8 +57,8 @@ export default function AdminPage() {
                     <td className="p-3">{item.reportedBy}</td>
                     <td className="p-3">
                       <div className="flex gap-2">
-                        <Link href={`/admin?item=${item.id}&action=approve#review-workflow`} className="rounded-md bg-volt-400 px-3 py-2 text-xs font-black uppercase text-graphite-950">Approve</Link>
-                        <Link href={`/admin?item=${item.id}&action=hide#review-workflow`} className="rounded-md border border-white/10 bg-white/6 px-3 py-2 text-xs font-black uppercase text-white">Hide</Link>
+                        <button type="button" disabled className="cursor-not-allowed rounded-md border border-white/10 bg-white/6 px-3 py-2 text-xs font-black uppercase text-zinc-400">Approve preview</button>
+                        <button type="button" disabled className="cursor-not-allowed rounded-md border border-white/10 bg-white/6 px-3 py-2 text-xs font-black uppercase text-zinc-400">Hide preview</button>
                       </div>
                     </td>
                   </tr>
@@ -202,9 +202,9 @@ export default function AdminPage() {
               <article key={group.id} className="rounded-md border border-white/10 bg-white/[0.045] p-5">
                 <p className="text-xs font-black uppercase text-volt-400">{group.category}</p>
                 <h2 className="mt-2 text-lg font-black text-white">{group.name}</h2>
-                <p className="mt-2 text-sm leading-6 text-zinc-400">{group.members.toLocaleString()} members | {group.moderators.length} moderators</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">Preview group record | moderator workflow sample</p>
                 <div className="mt-4 flex gap-2">
-                  <Link href={`/admin?group=${group.slug}#review-workflow`} className="rounded-md bg-volt-400 px-3 py-2 text-xs font-black uppercase text-graphite-950">Review</Link>
+                  <Link href="/admin#review-workflow" className="rounded-md bg-volt-400 px-3 py-2 text-xs font-black uppercase text-graphite-950">Review workflow</Link>
                   <Link href={`/community/groups/${group.slug}`} className="rounded-md border border-white/10 bg-white/6 px-3 py-2 text-xs font-black uppercase text-white">Rules</Link>
                 </div>
               </article>

@@ -14,9 +14,6 @@ const publicPreviewLimit = 4;
 export function QuestionAnswerPreview() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<ActiveCategory>("All");
-  const [bookmarkPreview, setBookmarkPreview] = useState<string | null>(null);
-  const [upvotePreview, setUpvotePreview] = useState<string | null>(null);
-  const [reportPreview, setReportPreview] = useState<string | null>(null);
 
   const categoryCounts = qaCategories.reduce<Record<string, number>>((counts, category) => {
     counts[category] = qaFoundationItems.filter((item) => item.category === category).length;
@@ -139,38 +136,33 @@ export function QuestionAnswerPreview() {
             <div className="mt-5 flex flex-wrap gap-3">
               <button
                 type="button"
-                aria-pressed={bookmarkPreview === item.id}
-                onClick={() => setBookmarkPreview(bookmarkPreview === item.id ? null : item.id)}
-                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-300 hover:border-volt-400/45"
+                disabled
+                className="inline-flex min-h-10 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-400"
               >
                 <Bookmark size={15} aria-hidden />
-                Bookmark placeholder
+                Bookmark preview
               </button>
               <button
                 type="button"
-                aria-pressed={upvotePreview === item.id}
-                onClick={() => setUpvotePreview(upvotePreview === item.id ? null : item.id)}
-                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-300 hover:border-volt-400/45"
+                disabled
+                className="inline-flex min-h-10 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-400"
               >
                 <ThumbsUp size={15} aria-hidden />
-                Upvote placeholder
+                Upvote preview
               </button>
               <button
                 type="button"
-                aria-pressed={reportPreview === item.id}
-                onClick={() => setReportPreview(reportPreview === item.id ? null : item.id)}
-                className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-300 hover:border-ember-500/45 hover:text-ember-300"
+                disabled
+                className="inline-flex min-h-10 cursor-not-allowed items-center justify-center gap-2 rounded-md border border-white/10 bg-white/6 px-3 text-xs font-black uppercase text-zinc-400"
               >
                 <Flag size={15} aria-hidden />
-                Report
+                Report preview
               </button>
             </div>
 
-            {bookmarkPreview === item.id || upvotePreview === item.id || reportPreview === item.id ? (
-              <p className="mt-3 text-xs font-bold leading-5 text-zinc-500" aria-live="polite">
-                Preview interaction only. No bookmark, vote, or report was submitted because account access and moderation are not enabled yet.
-              </p>
-            ) : null}
+            <p className="mt-3 text-xs font-bold leading-5 text-zinc-500" aria-live="polite">
+              Preview interaction only. No bookmark, vote, or report can be submitted until account access and moderation are enabled.
+            </p>
 
             <div className="mt-4 flex flex-wrap gap-3 text-xs font-black uppercase">
               {item.relatedSections.map((href) => (
