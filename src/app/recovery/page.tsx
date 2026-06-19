@@ -1,4 +1,5 @@
 import { AppValueCTA } from "@/components/AppValueCTA";
+import { AppSupportRouteCards, MindBodySupportSummary } from "@/components/AppSupportPages";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -10,6 +11,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { findMindBodyPage, mindBodyPages } from "@/lib/app-support-content";
 import { recoveryProtocols, recoverySystemCards, recoverySystems } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -19,6 +21,13 @@ export const metadata = buildRouteMetadata({
   path: "/recovery",
   keywords: ["recovery fitness", "mobility training", "injury recovery", "yoga", "Pilates", "Tai Chi"]
 });
+
+const recoverySupport = findMindBodyPage("recovery")!;
+const recoveryRouteCards = mindBodyPages.map((page) => ({
+  title: page.title,
+  href: `/${page.slug}`,
+  description: page.whatItIsFor
+}));
 
 export default function RecoveryPage() {
   const visibleProtocols = recoveryProtocols.slice(0, previewLimits.recoveryProtocols);
@@ -36,6 +45,18 @@ export default function RecoveryPage() {
       <section className="section-shell bg-black/45">
         <div className="section-inner">
           <AppValueCTA compact />
+        </div>
+      </section>
+
+      <MindBodySupportSummary page={recoverySupport} />
+
+      <section className="section-shell bg-black/45">
+        <div className="section-inner">
+          <AppSupportRouteCards
+            title="Recovery and mind-body app pages"
+            description="Direct app targets for recovery, mobility, stretching, yoga, Pilates, Tai Chi, and injured-athlete education."
+            routes={recoveryRouteCards}
+          />
         </div>
       </section>
 

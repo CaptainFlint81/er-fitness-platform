@@ -1,4 +1,5 @@
 import { AppValueCTA } from "@/components/AppValueCTA";
+import { MindBodySupportSummary } from "@/components/AppSupportPages";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -9,6 +10,7 @@ import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { findMindBodyPage } from "@/lib/app-support-content";
 import { mediaLibrary, mindBodyHighlights, pilatesSystems } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -24,6 +26,7 @@ const pilatesCards = pilatesSystems.map((system) => ({
   description: "Routines, images, videos, articles, comments, saves, and creator education.",
   status: "live-ready-ui" as const
 }));
+const pilatesSupport = findMindBodyPage("pilates")!;
 
 export default function PilatesPage() {
   const pilatesMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("pilates") || item.tags.includes("core"));
@@ -43,6 +46,7 @@ export default function PilatesPage() {
           <AppValueCTA compact />
         </div>
       </section>
+      <MindBodySupportSummary page={pilatesSupport} />
       <section id="pilates" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search pilates content" />

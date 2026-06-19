@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { communityGroups } from "@/lib/community-groups";
 import { educationTopics } from "@/lib/education-data";
+import { allAppSupportRoutes } from "@/lib/app-support-content";
 import { siteMetadataBase } from "@/lib/seo";
 
 const staticRoutes = [
@@ -24,6 +25,8 @@ const staticRoutes = [
   "/education",
   "/exercises",
   "/google-play-support",
+  "/glossary",
+  "/guides/beginner",
   "/injured-athlete",
   "/leaderboards",
   "/legal",
@@ -33,6 +36,7 @@ const staticRoutes = [
   "/legal/privacy",
   "/legal/terms",
   "/media",
+  "/mobility",
   "/nutrition",
   "/pets",
   "/pilates",
@@ -41,6 +45,8 @@ const staticRoutes = [
   "/routines",
   "/search",
   "/support",
+  "/stretching",
+  "/stretching",
   "/tai-chi",
   "/training-nutrition-principles",
   "/transformations",
@@ -66,6 +72,7 @@ function sitemapEntry(route: string, lastModified: Date): MetadataRoute.Sitemap[
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const dynamicRoutes = [
+    ...allAppSupportRoutes,
     ...educationTopics.map((topic) => `/education/${topic.slug}`),
     ...communityGroups.map((group) => `/community/groups/${group.slug}`)
   ];

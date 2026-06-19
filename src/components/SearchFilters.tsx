@@ -9,7 +9,11 @@ import { searchFilters } from "@/lib/platform-data";
 
 const searchIndex = [
   { title: "Exercise Library", href: "/exercises", category: "Exercises", tags: ["exercise", "equipment", "muscle groups", "workouts"] },
+  { title: "Pushup Form Guide", href: "/exercises/pushup", category: "Exercises", tags: ["pushup", "form guide", "reps"] },
+  { title: "Beginner Fitness Guide", href: "/guides/beginner", category: "Guides", tags: ["beginner", "weekly progression", "workout logs"] },
+  { title: "Fitness Terms Glossary", href: "/glossary", category: "Guides", tags: ["hinge", "brace", "core", "neutral spine"] },
   { title: "Routine Library", href: "/routines", category: "Workouts", tags: ["routines", "programs", "training"] },
+  { title: "Beginner Fitness Workout", href: "/workouts/beginner-fitness", category: "Workouts", tags: ["guided workouts", "weekly progression", "beginner"] },
   { title: "Training & Nutrition Principles", href: "/training-nutrition-principles", category: "Articles", tags: ["principles", "nutrition", "periodization"] },
   { title: "Adaptive Fitness", href: "/adaptive-fitness", category: "Conditions", tags: ["adaptive fitness", "conditions", "limited mobility"] },
   { title: "Injured Athlete", href: "/injured-athlete", category: "Injuries", tags: ["injuries", "recovery", "return to training"] },
@@ -18,7 +22,11 @@ const searchIndex = [
   { title: "Community Groups", href: "/community/groups", category: "Groups", tags: ["groups", "community", "users"] },
   { title: "Content Platform", href: "/content", category: "Contributors", tags: ["contributors", "credentials", "review status"] },
   { title: "Recovery Education", href: "/recovery", category: "Recovery", tags: ["recovery", "mobility", "breathing"] },
+  { title: "Mobility", href: "/mobility", category: "Recovery", tags: ["mobility", "warmup", "range of motion"] },
+  { title: "Stretching", href: "/stretching", category: "Recovery", tags: ["stretching", "cooldown", "flexibility"] },
   { title: "Nutrition Systems", href: "/nutrition", category: "Nutrition", tags: ["nutrition", "meal timing", "calories"] },
+  { title: "Recipes", href: "/nutrition/recipes", category: "Nutrition", tags: ["recipes", "protein", "meal building"] },
+  { title: "Cookbooks", href: "/nutrition/cookbooks", category: "Nutrition", tags: ["cookbooks", "legal resources", "MyPlate"] },
   { title: "Body Education", href: "/education#body-education", category: "Muscle Groups", tags: ["body areas", "muscle groups", "education"] }
 ];
 

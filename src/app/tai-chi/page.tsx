@@ -1,4 +1,5 @@
 import { AppValueCTA } from "@/components/AppValueCTA";
+import { MindBodySupportSummary } from "@/components/AppSupportPages";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -9,6 +10,7 @@ import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { findMindBodyPage } from "@/lib/app-support-content";
 import { mediaLibrary, mindBodyHighlights, taiChiSystems } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -24,6 +26,7 @@ const taiChiCards = taiChiSystems.map((system) => ({
   description: "Forms, movements, images, instructional videos, articles, comments, saves, and education.",
   status: "live-ready-ui" as const
 }));
+const taiChiSupport = findMindBodyPage("tai-chi")!;
 
 export default function TaiChiPage() {
   const taiChiMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("tai chi") || item.tags.includes("balance"));
@@ -43,6 +46,7 @@ export default function TaiChiPage() {
           <AppValueCTA compact />
         </div>
       </section>
+      <MindBodySupportSummary page={taiChiSupport} />
       <section id="tai-chi" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search tai chi content" />

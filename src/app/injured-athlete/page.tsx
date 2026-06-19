@@ -1,4 +1,5 @@
 import { AppValueCTA } from "@/components/AppValueCTA";
+import { MindBodySupportSummary } from "@/components/AppSupportPages";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -11,6 +12,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { findMindBodyPage } from "@/lib/app-support-content";
 import { injuredAthleteGuidance, injuredAthletePhases, injuryCategories, mediaLibrary } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -20,6 +22,8 @@ export const metadata = buildRouteMetadata({
   path: "/injured-athlete",
   keywords: ["injury recovery", "recovery fitness", "mobility training", "fitness education", "exercise science"]
 });
+
+const injuredAthleteSupport = findMindBodyPage("injured-athlete")!;
 
 export default function InjuredAthletePage() {
   const recoveryMedia = mediaLibrary.filter((item) => item.category === "Recovery Galleries" || item.category === "Workout Galleries");
@@ -42,6 +46,8 @@ export default function InjuredAthletePage() {
           <AppValueCTA compact />
         </div>
       </section>
+
+      <MindBodySupportSummary page={injuredAthleteSupport} />
 
       <section id="injury-search" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Activity, Dumbbell } from "lucide-react";
 
 import { ButtonLink } from "@/components/ButtonLink";
+import { AppSupportRouteCards } from "@/components/AppSupportPages";
 import { AppValueCTA } from "@/components/AppValueCTA";
 import { ContentPackPanel, ExerciseDemoPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { LockedContentPreview } from "@/components/LockedContentPreview";
@@ -10,6 +11,7 @@ import { EquipmentLibraryPanel } from "@/components/PublishReadyPanels";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
+import { exerciseSupportPages } from "@/lib/app-support-content";
 import { equipmentLibrary } from "@/lib/publish-ready-content";
 import { previewLimits } from "@/lib/access-control";
 import { buildRouteMetadata } from "@/lib/seo";
@@ -39,6 +41,12 @@ const defaultExerciseSources = [
     notes: "Federal physical activity guidance for general education context."
   }
 ];
+
+const appExerciseRouteCards = exerciseSupportPages.map((exercise) => ({
+  title: exercise.name,
+  href: `/exercises/${exercise.slug}`,
+  description: exercise.appSummary
+}));
 
 function getExerciseBenefits(exercise: ExerciseLibraryItem) {
   return exercise.benefits ?? [
@@ -89,6 +97,16 @@ export default function ExercisesPage() {
       <section className="section-shell bg-black/45">
         <div className="section-inner">
           <AppValueCTA compact />
+        </div>
+      </section>
+
+      <section className="section-shell bg-graphite-950/70">
+        <div className="section-inner">
+          <AppSupportRouteCards
+            title="App form-guide exercise pages"
+            description="Each app exercise button can open an exact website route with setup, mistakes, easier and harder versions, glossary terms, safety notes, and a short app summary."
+            routes={appExerciseRouteCards}
+          />
         </div>
       </section>
 

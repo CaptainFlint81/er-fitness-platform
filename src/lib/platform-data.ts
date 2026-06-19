@@ -454,6 +454,24 @@ export const appToWebsiteLinks: FeatureCard[] = [
     meta: "app://exercises"
   },
   {
+    title: "Form Popup -> Pushup Guide",
+    description: "Exercise form popups can open exact pages with what it is, target area, steps, common mistakes, easier versions, harder versions, terms, and safety notes.",
+    href: "/exercises/pushup",
+    meta: "app://exercises/pushup"
+  },
+  {
+    title: "Beginner Help -> Beginner Guide",
+    description: "Beginner explanations can open guided workout progress, weekly progression, reps, sets, time, body progress, and fitness-term pages.",
+    href: "/guides/beginner",
+    meta: "app://guides/beginner"
+  },
+  {
+    title: "Terms -> Glossary",
+    description: "In-app cues for hinge, brace, core, tempo, range of motion, mobility, stability, and full extension can open the plain-English glossary.",
+    href: "/glossary",
+    meta: "app://glossary"
+  },
+  {
     title: "Program Tracker -> Routine Library",
     description: "Tracked programs can open routine templates with block-by-block coaching notes and related education pages.",
     href: "/routines",
@@ -472,10 +490,22 @@ export const appToWebsiteLinks: FeatureCard[] = [
     meta: "app://nutrition"
   },
   {
+    title: "Recipes -> Recipe Hub",
+    description: "Recipe and cookbook buttons can open legal free resources, source notes, meal-building basics, macro basics, and calorie estimate disclaimers.",
+    href: "/nutrition/recipes",
+    meta: "app://nutrition/recipes"
+  },
+  {
     title: "Recovery Check-in -> Recovery Education",
     description: "Readiness, sleep, warmup, cooldown, mobility, stretching, breathing, and active recovery notes can open the matching website guides.",
     href: "/recovery",
     meta: "app://recovery"
+  },
+  {
+    title: "Mobility -> Mobility Guide",
+    description: "Mobility, stretching, yoga, Pilates, Tai Chi, and injured-athlete buttons can open dedicated website pages instead of the homepage.",
+    href: "/mobility",
+    meta: "app://recovery/mobility"
   },
   {
     title: "Media Upload -> Media Galleries",
@@ -1332,10 +1362,14 @@ export const footerGroups = [
     links: [
       { label: "Dashboard", href: "/dashboard" },
       { label: "Education", href: "/education" },
+      { label: "Beginner Guide", href: "/guides/beginner" },
+      { label: "Glossary", href: "/glossary" },
       { label: "Training & Nutrition Principles", href: "/training-nutrition-principles" },
       { label: "Exercise Library", href: "/exercises" },
       { label: "Routine Library", href: "/routines" },
       { label: "Workout Library", href: "/workouts" },
+      { label: "Recipes", href: "/nutrition/recipes" },
+      { label: "Cookbooks", href: "/nutrition/cookbooks" },
       { label: "Workout Builder", href: "/workouts/builder" },
       { label: "Challenges", href: "/challenges" },
       { label: "Leaderboards", href: "/leaderboards" }
@@ -1345,6 +1379,8 @@ export const footerGroups = [
     title: "Recover",
     links: [
       { label: "Recovery", href: "/recovery" },
+      { label: "Mobility", href: "/mobility" },
+      { label: "Stretching", href: "/stretching" },
       { label: "Injured Athlete", href: "/injured-athlete" },
       { label: "Adaptive Fitness", href: "/adaptive-fitness" },
       { label: "Yoga", href: "/yoga" },

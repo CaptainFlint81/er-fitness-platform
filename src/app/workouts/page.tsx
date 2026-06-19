@@ -1,5 +1,6 @@
 import { Dumbbell, ListPlus } from "lucide-react";
 
+import { AppSupportRouteCards } from "@/components/AppSupportPages";
 import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, ExerciseDemoPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
@@ -12,6 +13,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { workoutPathPages } from "@/lib/app-support-content";
 import { featuredWorkoutPlans, workoutBuilderBlocks, workoutSystemCards, workoutSystems, muscleGroups } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -21,6 +23,12 @@ export const metadata = buildRouteMetadata({
   path: "/workouts",
   keywords: ["workout library", "strength training", "bodyweight training", "fitness education", "sports performance"]
 });
+
+const appWorkoutRouteCards = workoutPathPages.map((workout) => ({
+  title: workout.title,
+  href: `/workouts/${workout.slug}`,
+  description: `${workout.difficulty} | ${workout.estimatedTime} | ${workout.goal}`
+}));
 
 export default function WorkoutsPage() {
   const visibleWorkoutPlans = featuredWorkoutPlans.slice(0, previewLimits.workoutCards);
@@ -38,6 +46,16 @@ export default function WorkoutsPage() {
       <section className="section-shell bg-black/45">
         <div className="section-inner">
           <AppValueCTA compact />
+        </div>
+      </section>
+
+      <section className="section-shell bg-graphite-950/70">
+        <div className="section-inner">
+          <AppSupportRouteCards
+            title="Guided workout paths"
+            description="These are direct app targets for guided workouts, weekly progression, workout logs, rep/time tracking, and premium-preview planning."
+            routes={appWorkoutRouteCards}
+          />
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import { ShoppingBasket, Utensils } from "lucide-react";
 
+import { AppSupportRouteCards } from "@/components/AppSupportPages";
 import { AppValueCTA } from "@/components/AppValueCTA";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
@@ -12,6 +13,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { nutritionTopicPages } from "@/lib/app-support-content";
 import { foodLibrary, mealPlanTemplates, nutritionBlocks, nutritionGoals, nutritionSystemCards } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -21,6 +23,12 @@ export const metadata = buildRouteMetadata({
   path: "/nutrition",
   keywords: ["nutrition education", "fitness education", "meal planning", "hydration", "exercise science"]
 });
+
+const appNutritionRouteCards = nutritionTopicPages.map((topic) => ({
+  title: topic.title,
+  href: `/nutrition/${topic.slug}`,
+  description: topic.beginnerExplanation
+}));
 
 export default function NutritionPage() {
   const visibleFoodRows = foodLibrary.slice(0, previewLimits.foodRows);
@@ -39,6 +47,16 @@ export default function NutritionPage() {
       <section className="section-shell bg-black/45">
         <div className="section-inner">
           <AppValueCTA compact />
+        </div>
+      </section>
+
+      <section className="section-shell bg-graphite-950/70">
+        <div className="section-inner">
+          <AppSupportRouteCards
+            title="Nutrition and cookbook app pages"
+            description="Direct app targets for recipes, meal prep, goal education, high-protein ideas, budget meals, and legal free cookbook resources."
+            routes={appNutritionRouteCards}
+          />
         </div>
       </section>
 

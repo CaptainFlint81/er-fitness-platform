@@ -1,4 +1,5 @@
 import { AppValueCTA } from "@/components/AppValueCTA";
+import { MindBodySupportSummary } from "@/components/AppSupportPages";
 import { CardGrid } from "@/components/CardGrid";
 import { ContentPackPanel, OpenWorkoutSystemsPanel, PublicMaterialsPanel } from "@/components/ContentPackPanel";
 import { DisclaimerNotice } from "@/components/DisclaimerNotice";
@@ -9,6 +10,7 @@ import { SearchFilters } from "@/components/SearchFilters";
 import { TagGrid } from "@/components/TagGrid";
 import { UploadPanel } from "@/components/content/UploadPanel";
 import { previewLimits } from "@/lib/access-control";
+import { findMindBodyPage } from "@/lib/app-support-content";
 import { mediaLibrary, mindBodyHighlights, yogaLevels } from "@/lib/platform-data";
 import { buildRouteMetadata } from "@/lib/seo";
 
@@ -24,6 +26,7 @@ const yogaCards = yogaLevels.map((level) => ({
   description: "Routine library, photos, instructional videos, articles, comments, saves, and creator tips.",
   status: "live-ready-ui" as const
 }));
+const yogaSupport = findMindBodyPage("yoga")!;
 
 export default function YogaPage() {
   const yogaMedia = mediaLibrary.filter((item) => item.title.toLowerCase().includes("yoga") || item.tags.includes("mobility"));
@@ -43,6 +46,7 @@ export default function YogaPage() {
           <AppValueCTA compact />
         </div>
       </section>
+      <MindBodySupportSummary page={yogaSupport} />
       <section id="yoga" className="section-shell bg-graphite-950/70">
         <div className="section-inner space-y-8">
           <SearchFilters label="Search yoga content" />
